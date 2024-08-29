@@ -1,0 +1,35 @@
+literatur zusammenfassen 
+überlick der literatur 
+
+statistische perspektive 
+
+Fragestellung: Statistischen Hinetrgrund zu Continual Learning 
+- stichprobe - population - Inferenz - Modelgüte
+
+differential privacy (data privacy) als denkbares Ausweichthema
+
+*Grundlage: 
+https://arxiv.org/pdf/2302.00487
+
+Zusatz:
+https://arxiv.org/pdf/2311.11908
+
+Weiteres:
+http://proceedings.mlr.press/v249/
+https://www.nature.com/articles/s42256-023-00747-w
+
+
+Zitierstil, soll EINZHEITLICH sein, 
+Tex basiert schreiben. 
+
+Möglich R implemetierung denkbar bei Interesse. 
+
+grobe Gliederung:
+Einleitung ins Thema über *Grundlage
+Zusammentragen verschiedener Paper und deren statistischer Hintergrund
+Abschluss: Aktuelles Forschungspaper näher präsentieren bzw. Kurve zur Fraud Analysis oder R Implementierung
+
+
+
+
+Fragen sammeln statt 10 mails

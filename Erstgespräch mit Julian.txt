@@ -3,7 +3,7 @@ literatur zusammenfassen
 
 statistische perspektive 
 
-Fragestellung: Statistischen Hinetrgrund zu Continual Learning 
+Fragestellung: Statistischen Hintergrund zu Continual Learning 
 - stichprobe - population - Inferenz - Modelgüte
 
 differential privacy (data privacy) als denkbares Ausweichthema

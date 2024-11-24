@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usetheme{default}
+\setbeamertemplate{footline}[frame number]
+\title{Kurzvortrag: Survey on Continual Learning}
+\author{Jörg Schantz}
+\date{26. November 2024}
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+\begin{frame}
+    \frametitle{Aktueller Gliederungsentwurf}
+    \begin{enumerate}
+    	\item Introduction
+    	\item Framework for CL
+    	\item Evaluation Metrics
+    	\item General Approaches
+    	\begin{enumerate}
+    		\item Replay
+    		\item Optimization
+    		\item Representation
+    		\item Architecture
+    		\item Regularization
+    	\end{enumerate}
+    	\item Distribution Drift and Bayes
+    	\item Regularization Approaches
+    	\begin{enumerate}
+    		\item Parameter Space
+    		\item Function Space
+    	\end{enumerate}
+    	\item Conclusion
+ 	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Framework}
+	Tasks $t = 1, ..., T$ und Sampleset $\mathcal{D} = \left\lbrace \mathcal{D}_1, ..., \mathcal{D}_T\right\rbrace$
+	\\
+	\vspace{0.5cm}
+	$\mathcal{D}_t = \lbrace (x_i^{(t)},y_i^{(t)}) \rbrace_{i=1}^{n_t}$ mit $n_t$ als die t-te Stichprobengröße
+	\\
+	\vspace{0.5cm}
+	$\mathcal{D}_t$ folgt der Verteilung $\mathbb{D}_t = p(X_t, Y_t)$ 
+	\\
+	\vspace{0.5cm}
+	$p(\mathcal{D}_{1:k}|\theta) = \prod_{t=1}^{k}p(\mathcal{D}_t|\theta)$
+\end{frame}
+\begin{frame}
+	\frametitle{Evaluation Metrics}
+	Average Accuracy $AA_k=\frac{1}{k}\sum_{i=1}^{k}a_{k,i}$
+	\\
+	\vspace{0.5cm}
+	Backward Transfer $BWT_k = \frac{1}{k-1}\sum_{i=1}^{k-1}(a_{k,i}-a_{i,i})$
+	\\
+	\vspace{0.5cm}
+	Forward Transfer $FWT_k = \frac{1}{k-1}\sum_{i=2}^{k}(a_{i,i}-\tilde{a}_i)$
+\end{frame}
+\end{document}

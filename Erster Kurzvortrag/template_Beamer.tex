@@ -13,7 +13,10 @@
     \begin{enumerate}
     	\item Introduction
     	\item Framework for CL
-    	\item Evaluation Metrics
+    	\begin{enumerate}
+    		\item Evaluation Metrics
+    		\item Distribution Drift and Bayes
+    	\end{enumerate}
     	\item General Approaches
     	\begin{enumerate}
     		\item Replay
@@ -21,8 +24,7 @@
     		\item Representation
     		\item Architecture
     		\item Regularization
-    	\end{enumerate}
-    	\item Distribution Drift and Bayes
+    	\end{enumerate}  	
     	\item Regularization Approaches
     	\begin{enumerate}
     		\item Parameter Space
@@ -32,20 +34,21 @@
  	\end{enumerate}
 \end{frame}
 \begin{frame}
-	\frametitle{Framework}
+	\frametitle{2. Framework}
 	Tasks $t = 1, ..., T$ und Sampleset $\mathcal{D} = \left\lbrace \mathcal{D}_1, ..., \mathcal{D}_T\right\rbrace$
 	\\
 	\vspace{0.5cm}
 	$\mathcal{D}_t = \lbrace (x_i^{(t)},y_i^{(t)}) \rbrace_{i=1}^{n_t}$ mit $n_t$ als die t-te Stichprobengröße
 	\\
 	\vspace{0.5cm}
-	$\mathcal{D}_t$ folgt der Verteilung $\mathbb{D}_t = p(X_t, Y_t)$ 
+	$\mathcal{D}_t$ folgen den Verteilungen $\mathbb{D}_t = p(X_t, Y_t)$ 
 	\\
 	\vspace{0.5cm}
+	Model 
 	$p(\mathcal{D}_{1:k}|\theta) = \prod_{t=1}^{k}p(\mathcal{D}_t|\theta)$
 \end{frame}
 \begin{frame}
-	\frametitle{Evaluation Metrics}
+	\frametitle{2.1 Evaluation Metrics}
 	Average Accuracy $AA_k=\frac{1}{k}\sum_{i=1}^{k}a_{k,i}$
 	\\
 	\vspace{0.5cm}
@@ -53,5 +56,74 @@
 	\\
 	\vspace{0.5cm}
 	Forward Transfer $FWT_k = \frac{1}{k-1}\sum_{i=2}^{k}(a_{i,i}-\tilde{a}_i)$
+	\\
+	\vspace{1cm}
+	$\tilde{a}_{k,i}$ Accuracy des Models p($\mathcal{D}_{1:k}|\theta)$ auf Testset $i$
+	\\
+	$\tilde{a}_i$ Accuracy des Models $p(\mathcal{D}_i|\theta)$
+\end{frame}
+\begin{frame}
+	\frametitle{2.2 Distribution Drift and Bayes}
+	Verteilungen alter und neuer Tasks müssen erhalten bleiben
+	\\
+	\vspace{0.5cm}
+	Speichern oder generieren alter Daten
+	\\
+	\vspace{0.5cm}
+	Formulierung eines Prior basierend auf dem bisher Gelernten (alter Posterior)
+	als Laplace Approximation oder Variational Inference
+\end{frame}
+\begin{frame}
+	\frametitle{3.1 Replay}
+	\textbf{Experience Replay} speichert kleine Menge alter Samples
+	\\
+	Auswahl: feste Menge, nah am Mean, Erhaltung des Gradient
+	\\
+	\vspace{0.5cm}
+	\textbf{Generative Replay}: zusätzliches Generativ Model; $X_k$ und $X'_{1:k-1}$ ja nach Gewichtung gemischt
+\end{frame}
+\begin{frame}
+	\frametitle{3.2 Optimization}
+	Parameter-Update durch alte Gradient Descent Richtung kontrolliert.
+	\\
+	Orthogonal; Dynamische Priorisierung
+	\\
+	\vspace{0.5cm}
+	Anpassung des "loss-landscape"
+	\\
+	\vspace{0.5cm}
+	Meta-learning als Versuch Task-spezifische Bias zu lernen
+\end{frame}
+\begin{frame}
+	\frametitle{3.3 Representation}
+	Pre-Training methoden und Self-Supervised Learning
+	\\
+	Herausforderung ist das Pre-Training flexibel einzusetzen 
+\end{frame}
+\begin{frame}
+	\frametitle{3.4 Architecture}
+	Aufteilung der Parameter in "Task-spezifisch" und "geteilt"
+	
+\end{frame}
+\begin{frame}
+	\frametitle{4.1 Parameter Space}
+	Gewichtung der Parameter basierend auf Fisher Information mit einer idR quadratischen Loss-Funktion
+	\\
+	Über FI direkt, Total-Loss, Änderung der Prediction
+	\\
+	\vspace{0.5cm}
+	Andere sind: Variational Inference, Forgetting Rate um den Prior zu regulieren
+\end{frame}
+\begin{frame}
+	\frametitle{4.2 Function Space}
+	Reguliert den Prediction Output
+	\\
+	Teacher / Student Beziehung  in Kombination mit Knowledge Distillation 
+	\vspace{0.5cm}
+	Unterschiede in Vergleichsgröße der KD (alte Samples, generiert, neues Sample, unlabeled Data), deswegen oft in Kombination mit Replay
+\end{frame}
+\begin{frame}
+	\frametitle{Conclusion}
+	Großes Fragezeichen... 
 \end{frame}
 \end{document}

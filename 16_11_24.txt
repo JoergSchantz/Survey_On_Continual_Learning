@@ -1,0 +1,12 @@
+Running example ggf mit einbauen
+
+Forgetting rate
+
+model nicht komplett neu trainieren?
+
+Warum Fisher?
+
+Fokus mehr auf 2. als auf 3. 
+annahmen aus 3tens zu 2. referenzieren Also welches 
+
+forgetting rate 

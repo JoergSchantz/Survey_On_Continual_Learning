@@ -1,3 +1,13 @@
 \begin{thebibliography}{xx}
 
+\harvarditem[Kirkpatrick et~al.]{Kirkpatrick, Pascanu, Rabinowitza, Veness,
+  Guillaume~Desjardins, Milan, Quan, Ramalho, Agnieszk Grabska-Barwinska,
+  Clopath, Kumaran \harvardand\ Hadsell}{2017}{JK}
+Kirkpatrick, J., Pascanu, R., Rabinowitza, N., Veness, J.,
+  Guillaume~Desjardins, A. A.~R., Milan, K., Quan, J., Ramalho, T., Agnieszk
+  Grabska-Barwinska, D.~H., Clopath, C., Kumaran, D. \harvardand\ Hadsell, R.
+  \harvardyearleft 2017\harvardyearright .
+\newblock Overcoming catastrophic forgetting in neural networks, {\em
+  arXiv:1612.00796v2} .
+
 \end{thebibliography}

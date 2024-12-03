@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.29)  24 NOV 2024 12:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.29)  3 DEC 2024 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,11 +392,7 @@ been already used, duplicate ignored
                    \relax 
 l.122 	\newpage
                 [1] (chapters/conclusion.tex) [2] (chapters/appendix.tex)
-[5] [6] (Thesis.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-) [7]
+[5] [6] (Thesis.bbl) [7]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 184.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -412,20 +408,21 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 1CF59376E62F911ED2DFC51D37294C1E;422.
  ) 
 Here is how much of TeX's memory you used:
- 10104 strings out of 474485
- 154635 string characters out of 5760148
+ 10110 strings out of 474485
+ 154693 string characters out of 5760148
  1928542 words of memory out of 5000000
- 32243 multiletter control sequences out of 15000+600000
- 563845 words of font info for 55 fonts, out of 8000000 for 9000
+ 32247 multiletter control sequences out of 15000+600000
+ 564192 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,246b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <E:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmbx12.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pf
 b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><E:/MikTex/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on Thesis.pdf (9 pages, 168540 bytes).
+blic/amsfonts/cm/cmr17.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+E:/MikTex/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Thesis.pdf (9 pages, 184224 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

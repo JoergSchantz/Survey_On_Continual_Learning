@@ -5,44 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 13 items.
 Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: dcu.bst
 Database file #1: bibliography.bib
+Warning--empty publisher in SB
 You've used 1 entry,
             2921 wiz_defined-function locations,
-            642 strings with 5070 characters,
-and the built_in function-call counts, 21372 in all, are:
-= -- 3648
-> -- 259
+            642 strings with 4854 characters,
+and the built_in function-call counts, 3545 in all, are:
+= -- 559
+> -- 47
 < -- 0
-+ -- 1876
-- -- 84
-* -- 1972
-:= -- 4027
++ -- 255
+- -- 14
+* -- 288
+:= -- 721
 add.period$ -- 2
 call.type$ -- 1
-change.case$ -- 14
+change.case$ -- 13
 chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 13
-empty$ -- 25
-format.name$ -- 87
-if$ -- 3847
+cite$ -- 2
+duplicate$ -- 24
+empty$ -- 45
+format.name$ -- 20
+if$ -- 648
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 1
+missing$ -- 2
 newline$ -- 7
-num.names$ -- 11
-pop$ -- 3
+num.names$ -- 10
+pop$ -- 12
 preamble$ -- 1
 purify$ -- 15
 quote$ -- 0
-skip$ -- 15
+skip$ -- 20
 stack$ -- 0
-substring$ -- 5400
-swap$ -- 1
+substring$ -- 769
+swap$ -- 9
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 21
+type$ -- 2
+warning$ -- 1
+while$ -- 23
 width$ -- 0
-write$ -- 17
+write$ -- 15
+(There was 1 warning)

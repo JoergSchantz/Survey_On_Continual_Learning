@@ -1,32 +1,5 @@
-
-We are interested in optimizing the parameters theta of a single neural network to perform well across
-multiple tasks $D_1, ...,D_T$ , specifically finding a MAP estimate $\theta^*=\arg\max_\theta p(\theta|D_1,...,D_T)$.
-However, the datasets arrive sequentially and we can only train on one of them at a time.
-In the following, we first discuss how Bayesian online learning solves this problem and introduce an
-approximate procedure for neural networks. We then review recent Kronecker factored approxima-
-tions to the curvature of neural networks and how to use them to obtain a better fit to the posterior.
-Finally, we introduce a hyperparameter that acts as a regularizer on the approximation to the posterior.\\
-Bayesian online learning [31 ], or Assumed Density Filtering [25 ], is a framework for updating an
-approximate posterior when data arrive sequentially. Using Bayes’ rule we would like to simply
-incorporate the most recent dataset D into the posterior as:
-\begin{equation}
-	E = mc^2
-\end{equation}
-where we use the posterior D from the previously observed tasks as the prior over the
-parameters for the most recent task. As the posterior given the previous datasets is typically intractable,
-Bayesian online learning formulates a parametric approximate posterior q with parameters pi, which
-it iteratively updates in two steps:
-Update step In the update step, the approximate posterior q with parameters pi from the previous
-task is used as a prior to find the new posterior given the most recent data:
-\begin{equation}
-	E = mc^2
-\end{equation}
-Projection step The projection step finds the distribution within the parametric family of the
-approximation that most closely resembles this posterior, i.e. sets pi such that:
-\begin{equation}
-	E = mc^2
-\end{equation}
-Opper and Winther [31] suggest minimizing the KL-divergence between the approximate and the
-true posterior, however this is mostly appropriate for models where the update-step posterior and a
-solution to the KL-divergence are available in closed form. In the following, we therefore propose
-using a Laplace approximation to make Bayesian online learning tractable for neural networks:
+Consider a general continual learning (GCL) problem. $T$ individual tasks $t \in \{1, ..., T\}$ arrive in sequence. Each task has a sample set $D_t$ where every $D_t$ may be drawn from its own population. Hence they are assumed to be independent but not identically distributed. A single sample has the form $D_t = (x^{(t)}_i,y^{(t)}_i)$ with $x^{(t)}_i$ being the $i$-th feature vector and $y^{(t)}_i$ the corresponding target.\\
+In regard to the distribution of $Y = \{Y^{(1)}, ..., Y^{(T)}\}$ one can differentiate between three different types of CL:\\
+\textit{Domain-incremental} learning considers only one big task where its data from one population arrives in multiple batches. Thus $\{Y^{(t)}\}=\{Y^{(t+1)}\}$ and $D_t \sim P(Y^{(t)})$ iid.\\
+\textit{Class-incremental} learning describes the problem of learning 
+\textit{Task-incremental} learning

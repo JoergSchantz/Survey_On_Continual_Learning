@@ -3,6 +3,8 @@
 \usepackage[]{graphicx}
 \usepackage[]{color}
 \usepackage{alltt}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \newcommand{\mytitle}{Survey on Regularization Methods in Continual Learning}
 \newcommand{\myname}{Jörg Schantz}
@@ -13,7 +15,7 @@ bindingoffset = 0mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{ragged2e}
 \usepackage{xcolor}
-\usepackage[round, comma]{natbib}
+\usepackage[numbers, sort&compress]{natbib}
 \usepackage{fancyhdr}
 \newcommand{\changefont}{%
 	\fontsize{8}{11}\selectfont
@@ -70,7 +72,7 @@ bindingoffset = 0mm]{geometry}
 			\vfill
 			
 			\large
-			Munich, January 17\textsuperscript{th}, 2025
+			Munich, March 20\textsuperscript{th}, 2025
 			
 			\vfill
 			
@@ -121,11 +123,21 @@ bindingoffset = 0mm]{geometry}
 	\section{Introduction}
 	\label{intro}
 	\input{chapters/introduction}
-	\newpage
+	\section{Neural Networks}
+	\label{nn}
+	\input{chapters/neuralnetworks}
 	\section{Framework}
 	\label{framework}
-	\input{chapters/framework}
-	\newpage
+	\input{chapters/Framework/framework}
+	\subsection{Scenarios}
+	\label{scenarios}
+	\input{chapters/Framework/scenarios}
+	\subsection{Stability-Plasticity Trade-off}
+	\label{cf}
+	\input{chapters/Framework/catastrophicForgetting}
+	\section{Metrics}
+	\label{metrics}
+	\input{chapters/metrics}
 	\section{Conclusion}
 	\label{conclusion}
 	\input{chapters/conclusion}
@@ -159,8 +171,8 @@ bindingoffset = 0mm]{geometry}
 	% ------------------------------------------------------------------------------
 	
 	\RaggedRight
+	\bibliographystyle{abbrvnat}
 	\bibliography{bibliography}
-	\bibliographystyle{dcu}
 	\newpage
 	
 	% ------------------------------------------------------------------------------
@@ -186,7 +198,7 @@ bindingoffset = 0mm]{geometry}
 	\\
 	
 	\vspace{1cm}
-	\textcolor{orange}{Munich, January 17\textsuperscript{th}, 2025 } \\
+	\textcolor{orange}{Munich, March 20\textsuperscript{th}, 2025 } \\
 	
 	\vspace{3cm}
 	

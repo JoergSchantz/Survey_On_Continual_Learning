@@ -1,0 +1,21 @@
+Although continual learning is general modeling concept, applicable in statistical inference as well as pattern driven prediction algorithms, it is mostly used a in machine learning context. More specifically in artificial neural networks (ANN). They are algorithms based on the functionality of a human brain and often designed for scenarios where data is seen in real-time e.g. stock market predictions or power control systems.\\
+The simplest form of an ANN is a single linear classifier, called one-neuron perceptron, that devides a vector $x$ into two classes using a so-called activation function $h(\cdot)$ \cite{Du_2019}. The neuron's input is given by
+\begin{equation}
+	\sum_{i = 1}^{n}{w_i x_i}+c = w^\top x+c
+\end{equation}
+where $n$ is the number of observations, $w$ a weight vector assigned to $x$ and $c$ the decision threshold. The two class regions are separated by the hyperplane \cite{Du_2019}
+\begin{equation}
+	w^\top x + c = 0
+\end{equation}.
+Using multiple neurons with the same activation function creates a one-layer perceptron and enables classification for more than two classes with the input
+\begin{equation}
+	\sum_{k = 1}^{m}\sum_{i=1}^{n}w_{k,i}x_i + c = (w_1^\top x + c, ..., w_m^\top x + c)^\top = W^\top x + c
+\end{equation} 
+where $W$ is the $n\times m$ weight matrix and $m$ the number of classes. Given $h$ the logistic function a one-layer perceptron is equal to a multinomial logit model \cite{Fahrmeir_2022}. Composing $l$ layers of neurons, Feed Forward NN (FFNN), allows for a more and more abstract representation of the data and finer class boundaries. The unknown weight matrices $W_1, ..., W_l$ and the decision threshold $c$ are the solution to the minimization problem
+\begin{equation}
+	\hat{\theta} = \arg\min{\sum_{i=1}^{n} L(f(x_i, \theta), y_i)}
+\end{equation}
+where $\theta$ are the unknown parameters, and $L(\cdot)$ a loss function which measures the difference between the predicted values $f(x_i, \theta)$ and true values $y_i$.\\
+%-------------
+% ADD PICTURE
+%-------------

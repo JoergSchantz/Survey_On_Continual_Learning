@@ -1,8 +1,168 @@
-\begin{thebibliography}{xx}
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\harvarditem{Bach \harvardand\ Maloof}{n.d.}{SB}
-Bach, S.~H. \harvardand\ Maloof, M.~A.  \harvardyearleft n.d.\harvardyearright
-  .
-\newblock {\em A Bayesian Approach to Concept Drift}, pp.~127--135.
+\bibitem[Aljundi et~al.(2019{\natexlab{a}})Aljundi, Kelchtermans, and
+  Tuytelaars]{aljundi2019tfcl}
+R.~Aljundi, K.~Kelchtermans, and T.~Tuytelaars.
+\newblock Task-free continual learning, 2019{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/1812.03596}.
+
+\bibitem[Aljundi et~al.(2019{\natexlab{b}})Aljundi, Lin, Goujaud, and
+  Bengio]{aljundi2019gradientbasedsampleselection}
+R.~Aljundi, M.~Lin, B.~Goujaud, and Y.~Bengio.
+\newblock Gradient based sample selection for online continual learning,
+  2019{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/1903.08671}.
+
+\bibitem[Bach and Maloof(2010)]{SB}
+S.~H. Bach and M.~A. Maloof.
+\newblock \emph{A Bayesian Approach to Concept Drift}, pages 127--135.
+\newblock 2010.
+
+\bibitem[Bidaki et~al.(2025)Bidaki, Mohammadkhah, Rezaee, Hassani, Eskandari,
+  Salahi, and Ghassemi]{bidaki2025}
+S.~A. Bidaki, A.~Mohammadkhah, K.~Rezaee, F.~Hassani, S.~Eskandari, M.~Salahi,
+  and M.~M. Ghassemi.
+\newblock Online continual learning: A systematic literature review of
+  approaches, challenges, and benchmarks, 2025.
+\newblock URL \url{https://arxiv.org/abs/2501.04897}.
+
+\bibitem[Chaudhry et~al.(2019)Chaudhry, Rohrbach, Elhoseiny, Ajanthan, Dokania,
+  Torr, and Ranzato]{chaudhry2019}
+A.~Chaudhry, M.~Rohrbach, M.~Elhoseiny, T.~Ajanthan, P.~K. Dokania, P.~H.~S.
+  Torr, and M.~Ranzato.
+\newblock On tiny episodic memories in continual learning, 2019.
+\newblock URL \url{https://arxiv.org/abs/1902.10486}.
+
+\bibitem[Du and Swamy(2019)]{Du_2019}
+K.-L. Du and M.~N.~S. Swamy.
+\newblock \emph{Neural Networks and Statistical Learning}.
+\newblock Springer London, 2 edition, 2019.
+
+\bibitem[Díaz-Rodríguez et~al.(2018)Díaz-Rodríguez, Lomonaco, Filliat, and
+  Maltoni]{díazrodríguez2018dontforgetforgettingnew}
+N.~Díaz-Rodríguez, V.~Lomonaco, D.~Filliat, and D.~Maltoni.
+\newblock Don't forget, there is more than forgetting: new metrics for
+  continual learning, 2018.
+\newblock URL \url{https://arxiv.org/abs/1810.13166}.
+
+\bibitem[Ebrahimi et~al.(2020)Ebrahimi, Meier, Calandra, Darrell, and
+  Rohrbach]{ebrahimi2020adversarialcontinuallearning}
+S.~Ebrahimi, F.~Meier, R.~Calandra, T.~Darrell, and M.~Rohrbach.
+\newblock Adversarial continual learning, 2020.
+\newblock URL \url{https://arxiv.org/abs/2003.09553}.
+
+\bibitem[Evron et~al.(2022)Evron, Moroshko, Ward, Srebro, and
+  Soudry]{evron2022}
+I.~Evron, E.~Moroshko, R.~Ward, N.~Srebro, and D.~Soudry.
+\newblock How catastrophic can catastrophic forgetting be in linear
+  regression?, 2022.
+\newblock URL \url{https://arxiv.org/abs/2205.09588}.
+
+\bibitem[Fahrmeir et~al.(2022)Fahrmeir, Kneib, Lang, and Marx]{Fahrmeir_2022}
+L.~Fahrmeir, T.~Kneib, S.~Lang, and B.~D. Marx.
+\newblock \emph{Regression - Models, Methods and Applications}.
+\newblock Springer Berlin, 2 edition, 2022.
+
+\bibitem[Fernando et~al.(2017)Fernando, Banarse, Blundell, Zwols, Ha, Rusu,
+  Pritzel, and Wierstra]{fernando2017pathnetevolutionchannelsgradient}
+C.~Fernando, D.~Banarse, C.~Blundell, Y.~Zwols, D.~Ha, A.~A. Rusu, A.~Pritzel,
+  and D.~Wierstra.
+\newblock Pathnet: Evolution channels gradient descent in super neural
+  networks, 2017.
+\newblock URL \url{https://arxiv.org/abs/1701.08734}.
+
+\bibitem[French(1999)]{FRENCH1999128}
+R.~M. French.
+\newblock Catastrophic forgetting in connectionist networks.
+\newblock \emph{Trends in Cognitive Sciences}, 3\penalty0 (4):\penalty0
+  128--135, 1999.
+\newblock ISSN 1364-6613.
+\newblock \doi{https://doi.org/10.1016/S1364-6613(99)01294-2}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S1364661399012942}.
+
+\bibitem[Javed and
+  White(2019)]{javed2019metalearningrepresentationscontinuallearning}
+K.~Javed and M.~White.
+\newblock Meta-learning representations for continual learning, 2019.
+\newblock URL \url{https://arxiv.org/abs/1905.12588}.
+
+\bibitem[Lopez-Paz and
+  Ranzato(2022)]{lopezpaz2022gradientepisodicmemorycontinual}
+D.~Lopez-Paz and M.~Ranzato.
+\newblock Gradient episodic memory for continual learning, 2022.
+\newblock URL \url{https://arxiv.org/abs/1706.08840}.
+
+\bibitem[Mallya et~al.(2018)Mallya, Davis, and
+  Lazebnik]{mallya2018piggybackadaptingsinglenetwork}
+A.~Mallya, D.~Davis, and S.~Lazebnik.
+\newblock Piggyback: Adapting a single network to multiple tasks by learning to
+  mask weights, 2018.
+\newblock URL \url{https://arxiv.org/abs/1801.06519}.
+
+\bibitem[Mcclelland et~al.(1995)Mcclelland, Mcnaughton, and
+  O'Reilly]{Mcclelland1995}
+J.~Mcclelland, B.~Mcnaughton, and R.~O'Reilly.
+\newblock Why there are complementary learning systems in the hippocampus and
+  neocortex: Insights from the successes and failures of connectionist models
+  of learning and memory.
+\newblock \emph{Psychological Review}, 102 3:\penalty0 419--457, 1995.
+\newblock \doi{https://doi.org/10.1037/0033-295X.102.3.419}.
+
+\bibitem[McCloskey and Cohen(1989)]{MCCLOSKEY1989109}
+M.~McCloskey and N.~J. Cohen.
+\newblock Catastrophic interference in connectionist networks: The sequential
+  learning problem.
+\newblock volume~24 of \emph{Psychology of Learning and Motivation}, pages
+  109--165. Academic Press, 1989.
+\newblock \doi{https://doi.org/10.1016/S0079-7421(08)60536-8}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0079742108605368}.
+
+\bibitem[Mirzadeh et~al.(2020)Mirzadeh, Farajtabar, Pascanu, and
+  Ghasemzadeh]{mirzadeh2020understandingroletrainingregimes}
+S.~I. Mirzadeh, M.~Farajtabar, R.~Pascanu, and H.~Ghasemzadeh.
+\newblock Understanding the role of training regimes in continual learning,
+  2020.
+\newblock URL \url{https://arxiv.org/abs/2006.06958}.
+
+\bibitem[Ratcliff(1990)]{Ratcliff1990ConnectionistMO}
+R.~Ratcliff.
+\newblock Connectionist models of recognition memory: constraints imposed by
+  learning and forgetting functions.
+\newblock \emph{Psychological RReview}, 97 2:\penalty0 285--308, 1990.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:18556305}.
+
+\bibitem[Rebuffi et~al.(2017)Rebuffi, Kolesnikov, Sperl, and
+  Lampert]{rebuffi2017icarlincrementalclassifierrepresentation}
+S.-A. Rebuffi, A.~Kolesnikov, G.~Sperl, and C.~H. Lampert.
+\newblock icarl: Incremental classifier and representation learning, 2017.
+\newblock URL \url{https://arxiv.org/abs/1611.07725}.
+
+\bibitem[Shalev-Shwartz and Ben-David(2014)]{Shalev-Shwartz}
+S.~Shalev-Shwartz and S.~Ben-David.
+\newblock \emph{Understanding Machine Learing: From Theory to Algorithms}.
+\newblock Cambridge University Press, 2014.
+
+\bibitem[van~de Ven et~al.(2022)van~de Ven, Tuytelaars, and
+  Tolias]{vandeVen2022}
+G.~M. van~de Ven, T.~Tuytelaars, and A.~S. Tolias.
+\newblock Three types of incremental learning.
+\newblock \emph{Nature Machine Intelligence}, 4\penalty0 (12):\penalty0
+  1185--1197, Dec 2022.
+\newblock ISSN 2522-5839.
+\newblock \doi{10.1038/s42256-022-00568-3}.
+\newblock URL \url{https://doi.org/10.1038/s42256-022-00568-3}.
+
+\bibitem[Wang et~al.(2024)Wang, Zhang, Su, Zhu, Fellow, and IEEE]{LW}
+L.~Wang, X.~Zhang, H.~Su, J.~Zhu, Fellow, and IEEE.
+\newblock A comprehensive survey of continual learning: Theory and method and
+  application, 2024.
+\newblock URL \url{https://arxiv.org/abs/2302.00487}.
 
 \end{thebibliography}

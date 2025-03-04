@@ -1,50 +1,60 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: abbrvnat.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
-Reallocating 'name_of_file' (item size: 1) to 4 items.
-The style file: dcu.bst
 Database file #1: bibliography.bib
+I was expecting a `,' or a `}'---line 1033 of file bibliography.bib
+ :  
+ :  isbn="978-1-107-05713-5"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1037 of file bibliography.bib
+ : @misc{mirzadeh2020understandingroletrainingregimes
+ :                                                   ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in SB
-You've used 1 entry,
-            2921 wiz_defined-function locations,
-            642 strings with 4854 characters,
-and the built_in function-call counts, 3545 in all, are:
-= -- 559
-> -- 47
-< -- 0
-+ -- 255
-- -- 14
-* -- 288
-:= -- 721
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 13
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 24
-empty$ -- 45
-format.name$ -- 20
-if$ -- 648
-int.to.chr$ -- 5
-int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 7
-num.names$ -- 10
-pop$ -- 12
+Warning--empty booktitle in MCCLOSKEY1989109
+You've used 23 entries,
+            2773 wiz_defined-function locations,
+            731 strings with 9488 characters,
+and the built_in function-call counts, 11117 in all, are:
+= -- 931
+> -- 821
+< -- 11
++ -- 276
+- -- 252
+* -- 936
+:= -- 1730
+add.period$ -- 80
+call.type$ -- 23
+change.case$ -- 151
+chr.to.int$ -- 22
+cite$ -- 48
+duplicate$ -- 428
+empty$ -- 820
+format.name$ -- 287
+if$ -- 2317
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 13
+newline$ -- 133
+num.names$ -- 92
+pop$ -- 349
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 130
 quote$ -- 0
-skip$ -- 20
+skip$ -- 400
 stack$ -- 0
-substring$ -- 769
-swap$ -- 9
-text.length$ -- 14
+substring$ -- 192
+swap$ -- 45
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
-warning$ -- 1
-while$ -- 23
+type$ -- 233
+warning$ -- 2
+while$ -- 77
 width$ -- 0
-write$ -- 15
-(There was 1 warning)
+write$ -- 311
+(There were 2 error messages)

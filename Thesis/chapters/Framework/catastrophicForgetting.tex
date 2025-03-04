@@ -1,0 +1,12 @@
+%%%%%%%%%%%%%%%%%%% Stability-Plasticity Trade-off %%%%%%%%%%%%%%%%%%%
+The challenge of continual learning is to strike a balance between stability and plasticity. Models should retain knowledge of past tasks, stability, while being flexible enough to incorporate information from new data, plasticity. The sequential training nature of CL changes the weights acquired form learning task A to accommodate for a new task B. This abrupt loss of information is called catastrophic forgetting \cite{FRENCH1999128, Mcclelland1995, MCCLOSKEY1989109, Ratcliff1990ConnectionistMO}. A naive approach to solving this dilemma would be storing and replaying data to the network with each training step. This is impractical because the amount of data needed to be stored is proportional to the number of tasks learned.\\
+\citeauthor{evron2022} define forgetting as
+\begin{equation}
+	F(k) = 1/k \sum_{t=1}^{k}\lVert X_t w_k - y_t \rVert^2
+\end{equation}.
+They have analyzed catastrophic forgetting in linear regression under the assumptions that values of $X$ are bounded by 1, tasks are jointly realizable with a bounded (by 1) norm and there are more parameters than observations in each sample. Realizability assumes the existence of true model weights s.t. $y =Xw$ \cite{Shalev-Shwartz}. This enables them to focus only on minimizing the distance between new and old model weights. In their work they find an upper bound for forgetting
+\begin{equation}
+	\sup F(k) = \sup 1/k \sum_{k}^{t=1}\lVert(I-Q_t)Q_k ... Q_1\rVert^2
+\end{equation}
+where $Q_i$ are the projections onto the solution spaces of $w_i$ i.e. $Q_i := I - X_i^\top(X_i X_i^\top)^{-1} X_i$.\\
+So far many methods of minimizing catastrophic forgetting have been developed. Their core ideas can be summarized to \textit{Replay} methods \cite{chaudhry2019,rebuffi2017icarlincrementalclassifierrepresentation, aljundi2019gradientbasedsampleselection}, \textit{Optimization} methods \cite{lopezpaz2022gradientepisodicmemorycontinual, javed2019metalearningrepresentationscontinuallearning, mirzadeh2020understandingroletrainingregimes}, \textit{Architecual} methods \cite{mallya2018piggybackadaptingsinglenetwork, ebrahimi2020adversarialcontinuallearning, fernando2017pathnetevolutionchannelsgradient} and \textit{Regularization} methods, which will be discussed in \autoref{}. 

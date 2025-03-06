@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -91,6 +91,22 @@ R.~M. French.
 K.~Javed and M.~White.
 \newblock Meta-learning representations for continual learning, 2019.
 \newblock URL \url{https://arxiv.org/abs/1905.12588}.
+
+\bibitem[Kirkpatrick et~al.(2017)Kirkpatrick, Pascanu, Rabinowitza, Veness,
+  Guillaume~Desjardins, Milan, Quan, Ramalho, Agnieszk Grabska-Barwinska,
+  Clopath, Kumaran, and Hadsell]{JK}
+J.~Kirkpatrick, R.~Pascanu, N.~Rabinowitza, J.~Veness, A.~A.~R.
+  Guillaume~Desjardins, K.~Milan, J.~Quan, T.~Ramalho, D.~H. Agnieszk
+  Grabska-Barwinska, C.~Clopath, D.~Kumaran, and R.~Hadsell.
+\newblock Overcoming catastrophic forgetting in neural networks.
+\newblock \emph{arXiv:1612.00796v2}, 2017.
+
+\bibitem[Li et~al.(2024)Li, Wu, and
+  Braverman]{li2024fixeddesignanalysisregularizationbased}
+H.~Li, J.~Wu, and V.~Braverman.
+\newblock Fixed design analysis of regularization-based continual learning,
+  2024.
+\newblock URL \url{https://arxiv.org/abs/2303.10263}.
 
 \bibitem[Lopez-Paz and
   Ranzato(2022)]{lopezpaz2022gradientepisodicmemorycontinual}

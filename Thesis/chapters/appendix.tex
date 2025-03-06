@@ -1,2 +1,18 @@
-
-	See all the extra material here.
+\subsection{Expansion of eq. 2 in \cite{JK} for $T$ samples}
+Let $D_i, i \in \{1, ...,t\}$ be $t$ independent samples, as described in \autoref{framework}, $\mathcal{D}^{(t)} = \{D_1, ..., D_t\}$ the joint samples and $w \in \mathbb{R}^d$ a weight vector. Then the conditional probability 
+\begin{equation}
+	\begin{split}
+		\mathbb{P}(\mathcal{D}^{(t)}|w) & = \frac{\mathbb{P}(D_1, ..., D_t, w)}{\mathbb{P}(w)} \\
+		& = \frac{\mathbb{P}(D_1, ...,D_{t-1}|D_t, w) \mathbb{P}(D_t, w)}{\mathbb{P}(w)} \\
+		& = \mathbb{P}(D_1, ...,D_{t-1}|w) \mathbb{P}(D_t|w)
+	\end{split}
+\end{equation}
+This we plug into the Bayes' Rule for the posterior $\mathbb{P}(w|\mathcal{D}^{(t)})$ and get 
+\begin{equation}
+	\begin{split}
+		\mathbb{P}(w|\mathcal{D}^{(t)}) & = \frac{\mathbb{P}(\mathcal{D}^{(t)}|w) \mathbb{P}(w)}{\mathbb{P}(\mathcal{D}^{(t)})} \\
+		& = \frac{\mathbb{P}(D_1, ...,D_{t-1}|w) \mathbb{P}(D_t|w) \mathbb{P}(w)}{\mathbb{P}(\mathcal{D}^{(t)})} \\
+		& = \frac{\mathbb{P}(w|D_1, ...,D_{t-1}) \mathbb{P}(D_t|w)}{\mathbb{P}(D_t)}
+	\end{split}
+\end{equation}
+The approximate Gaussian for the posterior $\mathbb{P}(w|D_1, ...,D_{t-1})$ of all prior tasks is then $N(w, (\sum_{i=1}^{t-1}\diag(F_i))^{-1})$ using the chain rule for independent Fisher information $F_i = \mathcal{I}_{D_i}(w)$.

@@ -4,6 +4,9 @@
 \contentsline {subsection}{\numberline {3.1}Scenarios}{2}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Stability-Plasticity Trade-off}{3}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Metrics}{4}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{5}{section.5}%
+\contentsline {section}{\numberline {5}Regularization}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Regularization via Parameters}{6}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Conclusion}{6}{section.6}%
 \contentsline {section}{\numberline {A}Appendix}{V}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Expansion of eq. 2 in \cite {JK} for $T$ samples}{V}{subsection.A.1}%
 \contentsline {section}{\numberline {B}Electronic appendix}{VI}{appendix.B}%

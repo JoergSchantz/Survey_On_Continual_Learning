@@ -16,45 +16,45 @@ Repeated entry---line 1037 of file bibliography.bib
 I'm skipping whatever remains of this entry
 Warning--empty publisher in SB
 Warning--empty booktitle in MCCLOSKEY1989109
-You've used 23 entries,
+You've used 25 entries,
             2773 wiz_defined-function locations,
-            731 strings with 9488 characters,
-and the built_in function-call counts, 11117 in all, are:
-= -- 931
-> -- 821
+            740 strings with 10020 characters,
+and the built_in function-call counts, 12392 in all, are:
+= -- 1026
+> -- 962
 < -- 11
-+ -- 276
-- -- 252
-* -- 936
-:= -- 1730
-add.period$ -- 80
-call.type$ -- 23
-change.case$ -- 151
-chr.to.int$ -- 22
-cite$ -- 48
-duplicate$ -- 428
-empty$ -- 820
-format.name$ -- 287
-if$ -- 2317
++ -- 323
+- -- 297
+* -- 1058
+:= -- 1941
+add.period$ -- 86
+call.type$ -- 25
+change.case$ -- 172
+chr.to.int$ -- 24
+cite$ -- 52
+duplicate$ -- 464
+empty$ -- 884
+format.name$ -- 334
+if$ -- 2568
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 13
-newline$ -- 133
-num.names$ -- 92
-pop$ -- 349
+missing$ -- 14
+newline$ -- 143
+num.names$ -- 100
+pop$ -- 394
 preamble$ -- 1
-purify$ -- 130
+purify$ -- 149
 quote$ -- 0
-skip$ -- 400
+skip$ -- 440
 stack$ -- 0
-substring$ -- 192
-swap$ -- 45
+substring$ -- 196
+swap$ -- 47
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 233
+type$ -- 255
 warning$ -- 2
-while$ -- 77
+while$ -- 83
 width$ -- 0
-write$ -- 311
+write$ -- 335
 (There were 2 error messages)

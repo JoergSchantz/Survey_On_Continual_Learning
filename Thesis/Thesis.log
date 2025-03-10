@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.29)  5 MAR 2025 23:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.29)  9 MAR 2025 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,7 +356,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip78
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 29.
+Package hyperref Info: Option `colorlinks' set `true' on input line 30.
 
 (E:\MikTex\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -372,24 +372,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 (E:\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -446,26 +446,26 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 45.
+Package hyperref Info: Link coloring ON on input line 46.
 (Thesis.out) (Thesis.out)
 \@outlinefile=\write3
 \openout3 = `Thesis.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
 
  (E:\MikTex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
 
 
 (E:\MikTex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/sigillum.png, id=51, 569.12625pt x 578.16pt>
+<img/sigillum.png, id=63, 569.12625pt x 578.16pt>
 File: img/sigillum.png Graphic file (type png)
 <use img/sigillum.png>
-Package pdftex.def Info: img/sigillum.png  used on input line 80.
+Package pdftex.def Info: img/sigillum.png  used on input line 81.
 (pdftex.def)             Requested size: 182.09485pt x 184.98851pt.
  [1
 
@@ -476,7 +476,7 @@ um.png>] [1] (Thesis.toc)
 
  [2]
 (chapters/introduction.tex) (chapters/neuralnetworks.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 17--130
+Underfull \hbox (badness 10000) in paragraph at lines 17--131
 
  []
 
@@ -485,60 +485,93 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 	\section
+l.131 	\section
                {Framework} [1] (chapters/Framework/framework.tex)
 (chapters/Framework/scenarios.tex [2])
-(chapters/Framework/catastrophicForgetting.tex [3]) (chapters/metrics.tex
-[4]
+(chapters/Framework/catastrophicForgetting.tex [3])
+Overfull \hbox (31.22285pt too wide) in paragraph at lines 10--140
+\OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 Q[]$ \OT1/cmr/m/n/12 are the pro-jec-ti
+ons onto the so-lu-tion spaces of $\OML/cmm/m/it/12 w[]$ \OT1/cmr/m/n/12 i.e. $
+\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 := \OML/cmm/m/it/12 I \OMS/cmsy/m/n/12 ^^@
+ \OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]X[]\OT1/cmr/m/n/12 )[
+]\OML/cmm/m/it/12 X[]$\OT1/cmr/m/n/12 . 
+ []
+
+(chapters/metrics.tex [4]
 Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-) (chapters/Regularization/regularization.tex) [5]
-(chapters/Regularization/parameters.tex
-Underfull \hbox (badness 10000) in paragraph at lines 11--13
+) (chapters/Regularization/regularization.tex [5])
+(chapters/Regularization/quadpen.tex [6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
 
  []
 
-) (chapters/conclusion.tex) [6] (chapters/appendix.tex
+) (chapters/Regularization/sparsepen.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--154
+
+ []
+
+[9] (chapters/conclusion.tex) [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 1.
+(hyperref)                removing `\begingroup' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1.
+(hyperref)                removing `\<let>-command' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 1.
+(hyperref)                removing `\NAT@ctype' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 1.
+(hyperref)                removing `\z@' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 1.
+(hyperref)                removing `\let' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
+(hyperref)                removing `\let' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
+(hyperref)                removing `\new@ifnextchar' on input line 172.
 
 
-Overfull \hbox (1.3829pt too wide) in paragraph at lines 2--3
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\unskip' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@italiccorr' on input line 172.
+
+(chapters/Appendix/ewcBayes.tex
+Overfull \hbox (1.3829pt too wide) in paragraph at lines 1--2
 \OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 D[]; i \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/1
 2 1\OML/cmm/m/it/12 ; :::; t\OMS/cmsy/m/n/12 g$ \OT1/cmr/m/n/12 be $\OML/cmm/m/
 it/12 t$ \OT1/cmr/m/n/12 in-de-pen-dent sam-ples, as de-scribed in [][]sec-tion
@@ -546,36 +579,42 @@ it/12 t$ \OT1/cmr/m/n/12 in-de-pen-dent sam-ples, as de-scribed in [][]sec-tion
 it/12 D[]; :::; D[]\OMS/cmsy/m/n/12 g$
  []
 
-) [5] [6] (Thesis.bbl [7] [8]) [9] [10] (Thesis.aux)
+) (chapters/Appendix/crr.tex [5]
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+) [6] [7] (Thesis.bbl [8] [9] [10]) [11] [12] (Thesis.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 791FFCA6948E905829C0BE387B0920A3;1617.
+(rerunfilecheck)             Checksum: CF6CFD208263BE3A1DEA298DB2024984;2159.
  ) 
 Here is how much of TeX's memory you used:
- 11601 strings out of 474485
- 176705 string characters out of 5760148
- 1938542 words of memory out of 5000000
- 33613 multiletter control sequences out of 15000+600000
+ 11700 strings out of 474485
+ 180110 string characters out of 5760148
+ 1941542 words of memory out of 5000000
+ 33673 multiletter control sequences out of 15000+600000
  569502 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,16n,79p,893b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,16n,79p,1179b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <E:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmbx12.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmex10.p
 fb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><E:/MikTex/fonts/type1/
 public/amsfonts/cm/cmmi6.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pf
 b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/pu
 blic/amsfonts/cm/cmr12.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E
-:/MikTex/fonts/type1/public/amsfonts/cm/cmti12.pfb><E:/MikTex/fonts/type1/publi
-c/amsfonts/cm/cmtt12.pfb><E:/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb>
-Output written on Thesis.pdf (15 pages, 338983 bytes).
+<E:/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><E:/MikTex/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:
+/MikTex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><E:/MikTex/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmti12.pfb><E:/
+MikTex/fonts/type1/public/amsfonts/cm/cmtt12.pfb><E:/MikTex/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on Thesis.pdf (21 pages, 398812 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 486 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

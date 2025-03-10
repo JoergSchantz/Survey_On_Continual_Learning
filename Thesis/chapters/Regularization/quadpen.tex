@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%% Regularization via Parameters %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% L2 Norm %%%%%%%%%%%%%%%%%%%
+%% L2 Continual Ridge Regression %% 
+Expanding on the naive \textit{ordinary continual learning} approach, \citeauthor{li2024fixeddesignanalysisregularizationbased} suggest an adaptation of the Ridge penalty \cite{Fahrmeir_2022} for continual learning, dubbed \textit{continual ridge regression} (CRR) \cite{li2024fixeddesignanalysisregularizationbased, zhao2024statisticaltheoryregularizationbasedcontinual}. Again the $\hat{w}^{(t)}$ follow a Gaussian distribution $N(w^*, \sigma^2(X^{(t)\top} X^{(t)})^{-1})$ and the estimation of $w^{(1)}$ stays the same as in ordinary CL, too. For estimating $w^{(2)}$, they introduce now a ridge-like penalty term
+\begin{equation}
+	\pen(w) = \lambda\lVert w - \hat{w}^{(1)}\rVert_2^2
+\end{equation}
+which centers the new weights around the previously estimated $\hat{w}^{(1)}$ instead of 0. Instead of using penalized least squares, the authors decide to perform a penalized mean squared error regression. %% change to MSE in Reg0 chapter
+\begin{equation}
+	\begin{split}
+		\hat{w}^{(2)} &= \arg\min_{w} \frac{1}{n}\lVert y^{(2)} - X^{(2)}w\rVert_2^2 + \pen(w) \\
+		&= (X^{(2)\top} X^{(2)}+\lambda n I)^{-1}(X^{(2)\top} y^{(2)} +\lambda n \hat{w}^{(1)})
+	\end{split}
+\end{equation}
+Like regular ridge regression, CRR is also biased for $\lambda \neq 0$. The distribution of $\hat{w}^{(2)}$ is also Gaussian with $\mathbb{E}(\hat{w}^{(2)}) = A(\lambda n \hat{w}^{(1)} + X^{(2)\top} X^{(2)}\mathbb{E}(w^{(2)}))$ and $\mathbb{V}(\hat{w}^{(2)}) = \sigma_2^2 A^\top X^{(2)\top} X^{(2)} A$, where $A =(X^{(2)\top} X^{(2)}+\lambda n I)^{-1}$. The proofs for a biased CRR and its distributional properties can be found in \autoref{crr}. The authors of \cite{li2024fixeddesignanalysisregularizationbased} acknowledge that centering around $\hat{w}^{(1)}$ enables a more stable learning environment, compared to ordinary CL, but still struggles when tasks are too dissimilar. Another reason is that all dimensions of $w$ are penalized equally throughout all tasks, i.e. $\pen(w) = (w - \hat{w}^{(1)})^\top \lambda I (w - \hat{w}^{(1)})$ . When learning a joint probability distribution, as in DIL, the information contained in $D_t$ about $w$ can vary across coordinates.
+%% Generalized L2 %%
+As a solution to this, \cite{zhao2024statisticaltheoryregularizationbasedcontinual} propose a generalized quadratic penalty for linear regression tasks, which allows individual regularization strengths in all directions of $w$.\\
+\textit{Generalized l2-regression} (GR) \cite{zhao2024statisticaltheoryregularizationbasedcontinual} extends CRR and ordinary CL to more than $T > 2$ tasks and is asymptotically equivalent to an unrestricted model, i.e. a model that can access all data samples at the same time. They state that the unrestricted estimation error $\mathcal{L}(\cdot)$ over all tasks is
+\begin{equation}\label{oracle}
+	\mathcal{L}(\hat{w}^{(T)}) = \sum_{i}^{d} \frac{\sigma^2}{\alpha^{(1)}_i n^{(^)}+ ... + \alpha^{(T)}_i n^{(^T)}}
+\end{equation}
+with $\alpha^{(t)}_i$ being the $i$-th eigenvector of $\Sigma_t$. Note that this error is monotonously decreasing as $T$ gets bigger thus no forgetting \cite{zhao2024statisticaltheoryregularizationbasedcontinual}. GRs goal now, is to find a matrix $\Lambda^{(t)}$ which properly accommodates a samples contribution to each $\hat{w}_i$ so that the combined estimation error of $L(\hat{w}^{(t)})$ converges to $\mathcal{L}(\hat{w}^{(T)})$. The authors are able to prove that for $\Lambda^{(t)}$ a diagonizable matrix with $\Lambda^{(t)} = U \Delta U^\top, \Delta = \diag(\delta_1, ... \delta_d)$ then $L(\hat{w}^{(t)})$ is bounded by $\mathcal{L}(\hat{w}^{(T)})$ if the diagonal values of $\Delta$ are 
+\begin{equation}
+	\delta_i = \frac{\sigma^2 / (U_i^\top w^*)^2 + \alpha^{(1)}_i n^{(1)} + ... + \alpha^{(t-1)}_i n^{(t-1)}}{n^{(t)}}
+\end{equation}. For large $n^{(t)}$, $\frac{\sigma^2 / (U_i^\top w^*)^2}{n^{(t)}}$ becomes small enough to be dropped and \cite{zhao2024statisticaltheoryregularizationbasedcontinual} approximate $\tilde{\Lambda}^{(t)} = \frac{1}{n^{(t)}}\sum_{i = 1}^{t-1} n^{(i)}\Sigma_i$.\\
+In this linear setting, the $\Sigma_i$ are equivalent to the Hessian and Fisher information matrix (FIM) of the loss function. This means that every $w_i$ penalized proportionally to the information sample $D_t$ provides contains about it.\\
+\cite{zhao2024statisticaltheoryregularizationbasedcontinual} demonstrate how powerful regularization can be. Though, a shared label space for $y$ is not always realistic, see CIL. \cite{JK} tackle this problem by taking a Bayesian look at the joint distribution over all tasks.\\
+%% EWC %% 
+One of the most influential regularization approaches for CL is the \textit{elastic weight consolidation} penalty (EWC) by \citeauthor{JK} \cite{zhao2024statisticaltheoryregularizationbasedcontinual, zenke2017continuallearningsynapticintelligence, Husz_r_2018, li2024fixeddesignanalysisregularizationbased, titsias2020functionalregularisationcontinuallearning, yin2021optimizationgeneralizationregularizationbasedcontinual, loo2020generalizedvariationalcontinuallearning, benzing2021unifyingregularisationmethodscontinual}. They suggest measuring weight importance via the Fisher information matrix (FIM) \cite{JK}. Kirkpatrick et al. justify this approach through a probabilistic view of neural networks. They no longer want to find the parameters that best fit the data pattern but find the most probable model weights, depending on a given data sample. Using Bayes' Rule and the assumption of independent samples (e.g. CIL), they express the conditional probability $\mathbb{P}(w|\mathcal{D}^{(t)}), \mathcal{D}^{(t)} = \{D_1, ..., D_t\}$ of the weights as
+\begin{equation}\label{ewcBayes}
+	\log(\mathbb{P}(w|\mathcal{D}^{(t)})) = \log(\mathbb{P}(D_{t}|w)) + \log(\mathbb{P}(w|\mathcal{D}^{(t-1)})) - \log(\mathbb{P}(D_t))
+\end{equation}
+and point out that all of the information about all prior tasks is in $\mathbb{P}(w|\mathcal{D}^{(t-1)})$, which is unavailable due to the sequential training constraint. To overcome this problem, the authors approximate the missing posterior as a Gaussian with expected value $\hat{w}^{(t-1)}$ and precision matrix $F = diag(\sum_{i < t}\mathcal{I}_i(w_1), ..., \sum_{i < t }\mathcal{I}_i(w_d))$ where $\mathcal{I}_i(w_j), j \in \{1, ..., d\}$ are the Fisher information of $w_i$ from the $i$-th training step, thus $\mathbb{P}(w|\mathcal{D}^{(t-1)}) \dot{\sim} N(\hat{w}^{(t-1)}, F^{-1})$. The resulting penalty function is a weighted Ridge penalty, where the squared deviation from the previous parameters is weighed against its Fisher information:
+\begin{equation}\label{EWC}
+	\pen_t(w) = \frac{\lambda}{2}(w - \hat{w}^{(t-1)})^\top F (w - \hat{w}^{(t-1)})
+\end{equation}
+Note that if the loss is chosen as the negative log-likelihood, EWC is equal to the 2nd Taylor approximation of a generalized forgetting rate in \eqref{2TA}. In this case the FIM is equivalent to the Hessian of the loss. In general the EWC penalty encourages gradient decent to follow along trajectories of $w_i$ with low FI which are thus less prone to forgetting.\\
+%% SI %%
+Neural networks often rely on numerical gradient decent solutions for parameter estimation \cite{Fahrmeir_2022}, \citeauthor{zenke2017continuallearningsynapticintelligence} argue in \cite{zenke2017continuallearningsynapticintelligence} that a static estimate of parameter importance between training steps is not enough and suggest a dynamic solution, \textit{synaptic intelligence} (SI), along the loss' gradient. Similar to EWC and CRR they impose a quadratic penalty on the loss:
+\begin{equation}\label{SI}
+	\pen(w) = \frac{\lambda}{2} (w - \hat{w}^{(1)})^\top H (w - \hat{w}^{(1)})
+\end{equation} where $H$ is the diagonal of the Hessian of the current loss $L(X^{(2)}, y^{(2)}, w)$. Approximating the true Hessian with its diagonal entries, again implies independent covariates like in EWC and CRR.\\
+%% MAS %%
+The next example is the \textit{memory aware synapses} (MAS) penalty \cite{aljundi2018memoryawaresynapseslearning}. Similar to EWC and SI it focuses on task disjoint CL. To further improve the idea of gradient based importance, the authors consider the model output $h(\cdot)$ and measure its sensitivity to changes in the model parameters. The importance matrix $\Omega$ holds the mean gradients over all samples of the squared L2-normed outputs i.e. $\Omega^{(t)} = 1/n \sum_{i \leq n} \nabla \lVert h(x^{(t)}_i, \hat{w}^{(t)}) \rVert_2^2$. With the resulting penalty function:
+\begin{equation}\label{MAS}
+	\pen_t(w)=\lambda (w - \hat{w}^{(t-1)})^\top \Omega^{(t-1)} (w - \hat{w}^{(t-1)})
+\end{equation}.
+\cite{aljundi2018memoryawaresynapseslearning} aim to provide flexible importance measure, which can be calculated on any representative data set, since it does not depend on the model loss.\\
+
+Generally regularization in CL through a squared penalty restricts large deviations from the a fore estimated parameters if these $w_i^{(t-1)}$ were important to prior learnings. Given some importance matrix $A$ a general l2-penalty for the next training step is:
+\begin{equation}\label{l2pen}
+	pen_{t+1}(w) = \lambda (w - \hat{w}^{(t)})^\top A (w - \hat{w}^{(t)})
+\end{equation}.
+Although FIM and Hessian at large are not identical, \cite{benzing2021unifyingregularisationmethodscontinual} demonstrate how SI and MAS are still linked to FIM. \cite{yin2021optimizationgeneralizationregularizationbasedcontinual} provide a unifying analysis of squared penalties in CL. They conclude that the difference between the true loss over all tasks and its approximation depends on two factors. First a sample effect, which is negligible for increasing $n^{(t)}$, and second the technical of the approximation, thus call for more accurate approximations. Furthermore \cite{liu2018rotatenetworksbetterweight} point out that the diagonal approximation of the FIM has potential to lead gradient decent "off-path" and use rotations of the parameter space to adjust.

@@ -1,9 +1,15 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aljundi et~al.(2018)Aljundi, Babiloni, Elhoseiny, Rohrbach, and
+  Tuytelaars]{aljundi2018memoryawaresynapseslearning}
+R.~Aljundi, F.~Babiloni, M.~Elhoseiny, M.~Rohrbach, and T.~Tuytelaars.
+\newblock Memory aware synapses: Learning what (not) to forget, 2018.
+\newblock URL \url{https://arxiv.org/abs/1711.09601}.
 
 \bibitem[Aljundi et~al.(2019{\natexlab{a}})Aljundi, Kelchtermans, and
   Tuytelaars]{aljundi2019tfcl}
@@ -22,6 +28,11 @@ R.~Aljundi, M.~Lin, B.~Goujaud, and Y.~Bengio.
 S.~H. Bach and M.~A. Maloof.
 \newblock \emph{A Bayesian Approach to Concept Drift}, pages 127--135.
 \newblock 2010.
+
+\bibitem[Benzing(2021)]{benzing2021unifyingregularisationmethodscontinual}
+F.~Benzing.
+\newblock Unifying regularisation methods for continual learning, 2021.
+\newblock URL \url{https://arxiv.org/abs/2006.06357}.
 
 \bibitem[Bidaki et~al.(2025)Bidaki, Mohammadkhah, Rezaee, Hassani, Eskandari,
   Salahi, and Ghassemi]{bidaki2025}
@@ -86,11 +97,27 @@ R.~M. French.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S1364661399012942}.
 
+\bibitem[Huszár(2018)]{Husz_r_2018}
+F.~Huszár.
+\newblock Note on the quadratic penalties in elastic weight consolidation.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 115\penalty0
+  (11), Feb. 2018.
+\newblock ISSN 1091-6490.
+\newblock \doi{10.1073/pnas.1717042115}.
+\newblock URL \url{http://dx.doi.org/10.1073/pnas.1717042115}.
+
 \bibitem[Javed and
   White(2019)]{javed2019metalearningrepresentationscontinuallearning}
 K.~Javed and M.~White.
 \newblock Meta-learning representations for continual learning, 2019.
 \newblock URL \url{https://arxiv.org/abs/1905.12588}.
+
+\bibitem[Jung et~al.(2021)Jung, Ahn, Cha, and
+  Moon]{jung2021continuallearningnodeimportancebased}
+S.~Jung, H.~Ahn, S.~Cha, and T.~Moon.
+\newblock Continual learning with node-importance based adaptive group sparse
+  regularization, 2021.
+\newblock URL \url{https://arxiv.org/abs/2003.13726}.
 
 \bibitem[Kirkpatrick et~al.(2017)Kirkpatrick, Pascanu, Rabinowitza, Veness,
   Guillaume~Desjardins, Milan, Quan, Ramalho, Agnieszk Grabska-Barwinska,
@@ -107,6 +134,20 @@ H.~Li, J.~Wu, and V.~Braverman.
 \newblock Fixed design analysis of regularization-based continual learning,
   2024.
 \newblock URL \url{https://arxiv.org/abs/2303.10263}.
+
+\bibitem[Liu et~al.(2018)Liu, Masana, Herranz, de~Weijer, Lopez, and
+  Bagdanov]{liu2018rotatenetworksbetterweight}
+X.~Liu, M.~Masana, L.~Herranz, J.~V. de~Weijer, A.~M. Lopez, and A.~D.
+  Bagdanov.
+\newblock Rotate your networks: Better weight consolidation and less
+  catastrophic forgetting, 2018.
+\newblock URL \url{https://arxiv.org/abs/1802.02950}.
+
+\bibitem[Loo et~al.(2020)Loo, Swaroop, and
+  Turner]{loo2020generalizedvariationalcontinuallearning}
+N.~Loo, S.~Swaroop, and R.~E. Turner.
+\newblock Generalized variational continual learning, 2020.
+\newblock URL \url{https://arxiv.org/abs/2011.12328}.
 
 \bibitem[Lopez-Paz and
   Ranzato(2022)]{lopezpaz2022gradientepisodicmemorycontinual}
@@ -165,6 +206,13 @@ S.~Shalev-Shwartz and S.~Ben-David.
 \newblock \emph{Understanding Machine Learing: From Theory to Algorithms}.
 \newblock Cambridge University Press, 2014.
 
+\bibitem[Titsias et~al.(2020)Titsias, Schwarz, de~G.~Matthews, Pascanu, and
+  Teh]{titsias2020functionalregularisationcontinuallearning}
+M.~K. Titsias, J.~Schwarz, A.~G. de~G.~Matthews, R.~Pascanu, and Y.~W. Teh.
+\newblock Functional regularisation for continual learning with gaussian
+  processes, 2020.
+\newblock URL \url{https://arxiv.org/abs/1901.11356}.
+
 \bibitem[van~de Ven et~al.(2022)van~de Ven, Tuytelaars, and
   Tolias]{vandeVen2022}
 G.~M. van~de Ven, T.~Tuytelaars, and A.~S. Tolias.
@@ -180,5 +228,31 @@ L.~Wang, X.~Zhang, H.~Su, J.~Zhu, Fellow, and IEEE.
 \newblock A comprehensive survey of continual learning: Theory and method and
   application, 2024.
 \newblock URL \url{https://arxiv.org/abs/2302.00487}.
+
+\bibitem[Yin et~al.(2021)Yin, Farajtabar, Li, Levine, and
+  Mott]{yin2021optimizationgeneralizationregularizationbasedcontinual}
+D.~Yin, M.~Farajtabar, A.~Li, N.~Levine, and A.~Mott.
+\newblock Optimization and generalization of regularization-based continual
+  learning: a loss approximation viewpoint, 2021.
+\newblock URL \url{https://arxiv.org/abs/2006.10974}.
+
+\bibitem[Yoon et~al.(2018)Yoon, Yang, Lee, and
+  Hwang]{yoon2018lifelonglearningdynamicallyexpandable}
+J.~Yoon, E.~Yang, J.~Lee, and S.~J. Hwang.
+\newblock Lifelong learning with dynamically expandable networks, 2018.
+\newblock URL \url{https://arxiv.org/abs/1708.01547}.
+
+\bibitem[Zenke et~al.(2017)Zenke, Poole, and
+  Ganguli]{zenke2017continuallearningsynapticintelligence}
+F.~Zenke, B.~Poole, and S.~Ganguli.
+\newblock Continual learning through synaptic intelligence, 2017.
+\newblock URL \url{https://arxiv.org/abs/1703.04200}.
+
+\bibitem[Zhao et~al.(2024)Zhao, Wang, Huang, and
+  Lin]{zhao2024statisticaltheoryregularizationbasedcontinual}
+X.~Zhao, H.~Wang, W.~Huang, and W.~Lin.
+\newblock A statistical theory of regularization-based continual learning,
+  2024.
+\newblock URL \url{https://arxiv.org/abs/2406.06213}.
 
 \end{thebibliography}

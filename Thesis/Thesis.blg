@@ -5,56 +5,60 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: abbrvnat.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-I was expecting a `,' or a `}'---line 1033 of file bibliography.bib
+Repeated entry---line 401 of file bibliography.bib
+ : @misc{yoon2018lifelonglearningdynamicallyexpandable
+ :                                                    ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1039 of file bibliography.bib
  :  
  :  isbn="978-1-107-05713-5"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1037 of file bibliography.bib
+Repeated entry---line 1043 of file bibliography.bib
  : @misc{mirzadeh2020understandingroletrainingregimes
  :                                                   ,
 I'm skipping whatever remains of this entry
 Warning--empty publisher in SB
 Warning--empty booktitle in MCCLOSKEY1989109
-You've used 25 entries,
+You've used 36 entries,
             2773 wiz_defined-function locations,
-            740 strings with 10020 characters,
-and the built_in function-call counts, 12392 in all, are:
-= -- 1026
-> -- 962
-< -- 11
-+ -- 323
-- -- 297
-* -- 1058
-:= -- 1941
-add.period$ -- 86
-call.type$ -- 25
-change.case$ -- 172
-chr.to.int$ -- 24
-cite$ -- 52
-duplicate$ -- 464
-empty$ -- 884
-format.name$ -- 334
-if$ -- 2568
+            791 strings with 12376 characters,
+and the built_in function-call counts, 17347 in all, are:
+= -- 1430
+> -- 1360
+< -- 13
++ -- 457
+- -- 420
+* -- 1477
+:= -- 2720
+add.period$ -- 122
+call.type$ -- 36
+change.case$ -- 246
+chr.to.int$ -- 35
+cite$ -- 74
+duplicate$ -- 642
+empty$ -- 1244
+format.name$ -- 468
+if$ -- 3587
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 143
-num.names$ -- 100
-pop$ -- 394
+missing$ -- 15
+newline$ -- 201
+num.names$ -- 144
+pop$ -- 569
 preamble$ -- 1
-purify$ -- 149
+purify$ -- 212
 quote$ -- 0
-skip$ -- 440
+skip$ -- 623
 stack$ -- 0
-substring$ -- 196
-swap$ -- 47
+substring$ -- 218
+swap$ -- 59
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 255
+type$ -- 376
 warning$ -- 2
-while$ -- 83
+while$ -- 116
 width$ -- 0
-write$ -- 335
-(There were 2 error messages)
+write$ -- 474
+(There were 3 error messages)

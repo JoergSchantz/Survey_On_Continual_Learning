@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\pen}{pen}
 
 \newcommand{\mytitle}{Survey on Regularization Methods in Continual Learning}
 \newcommand{\myname}{Jörg Schantz}
@@ -144,7 +145,12 @@ bindingoffset = 0mm]{geometry}
 	\input{chapters/Regularization/regularization}
 	\subsection{Regularization via Parameters}
 	\label{reg01}
-	\input{chapters/Regularization/parameters}
+	\subsubsection{Quadratic Penalties}
+	\label{reg011}
+	\input{chapters/Regularization/quadpen}
+	\subsubsection{Sparse Penalties}
+	\label{reg012}
+	\input{chapters/Regularization/sparsepen}
 	\section{Conclusion}
 	\label{conclusion}
 	\input{chapters/conclusion}
@@ -163,7 +169,13 @@ bindingoffset = 0mm]{geometry}
 	
 	\section{Appendix}
 	\label{app}
-	\input{chapters/appendix}
+	\subsection{Expansion of eq. 2 in \cite{JK} for $T$ samples \eqref{ewcBayes}}
+	\label{ewcB}
+	\input{chapters/Appendix/ewcBayes}
+	\subsection{Proof that CRR is biased}
+	\label{crr}
+	\input{chapters/Appendix/crr}
+		
 	\newpage
 	
 	\section{Electronic appendix}

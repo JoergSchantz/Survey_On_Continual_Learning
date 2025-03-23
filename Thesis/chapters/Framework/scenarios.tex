@@ -1,22 +1,32 @@
 %%%%%%%%%%%%%%%%%%% Scenarios %%%%%%%%%%%%%%%%%%%
-In regards to the distribution $\mathbb{P}$ of $Y^{(t)} = \{y^{(1)}, ..., y^{(t)}\}$ over which the model is evaluated after seeing the $t$-th samples, \cite{bidaki2025} and \cite{LW} differentiate between eight CL scenarios:\\
+In regards to the label space \citeauthor{bidaki2025} \cite{bidaki2025} and \citeauthor{LW} \cite{LW} differentiate between eight CL scenarios:
+
 \textit{Task-incremental learning} (TIL), \textit{Class-incremental learning} (CIL), \textit{Task-Free continual learning} (TFCL) and \textit{Online contiunal learning} (OCL) algorithms all aim to learn a distinct set of tasks, while providing a task identity, if not stated otherwise \cite{bidaki2025, LW}.
 \begin{equation}
-	\emptyset = y^{(i)} \cap y^{(i+1)} \Rightarrow \mathbb{P}(Y^{(t+1)}) = \prod_{i = 1}^{t+1}\mathbb{P}(y^{(i)})
+	y^{(i)} \cap y^{(i+1)} = \emptyset
 \end{equation}
-TIL allows task individual output layers or the training of separate models for each task. The challenge then is less about forgetting (\autoref{cf}) but finding a healthy balance between predicting accuracy and model complexity \cite{vandeVen2022}.\\
-CIL restricts this approach by only training one model, which is introduced stepwise to different classification tasks. CIL only provides task identity during training \cite{vandeVen2022}. For example with samples $t$ an agent learns to classify hats or gloves and with sample $t+1$ shirts or pants. When testing, it is then also required to classify hats or shirts.\\
-TFCL does not provide any task identity to the model and only focuses on labels \cite{aljundi2019tfcl}.\\
-OCL limits its sample sizes to one and focuses on real-time training \cite{bidaki2025, LW}.\\
-\textit{Domain-incremental learning} (DIL) algorithms seek to learn multiple tasks that share the same label space [\citenum{bidaki2025}]. For example first learning to drive during sunny weather and later on while it is rainy.
+
+TIL allows task individual output layers or the training of separate models for each task. The challenge then is less about forgetting but finding a healthy balance between prediction accuracy and model complexity \cite{vandeVen2022}.
+
+CIL restricts this approach by only training one model, which is introduced stepwise to different classification tasks. CIL only provides task identity during training \cite{vandeVen2022}. For example, with samples $t$ an agent learns to classify hats or gloves and with sample $t+1$ shirts or pants. When testing, it is then also required to classify hats or shirts.
+
+TFCL does not provide any task identity to the model and only focuses on labels \cite{aljundi2019tfcl}.
+
+OCL limits its sample sizes to one and focuses on real-time training \cite{bidaki2025, LW}.
+
+\textit{Domain-incremental learning} (DIL) algorithms seek to learn multiple tasks that share the same label space [\citenum{bidaki2025}]. For example, first learning to drive during sunny weather and later while it is rainy. One could view this as a version of task-incremental learning, where task identity is secondary as all tasks have the same data labels. Thus, design based strategies to inhibit forgetting are not possible \cite{vandeVen2022}.
 \begin{equation}
 	y^{(i)}=y^{(i+1)} \nRightarrow \mathbb{P}(y^{(i)}) = \mathbb{P}(y^{(i+1)})
 \end{equation}
-One could view this as a version of task-incremental learning, where task identity is secondary as all tasks have the same data labels. Thus design based strategies to inhibit catastrophic forgetting are not possible \cite{vandeVen2022}.\\
+
 \textit{Instance-incremental learning} (IIL) algorithms learn one common task for all training samples \cite{bidaki2025, LW}.
+This is a special case of DIL where a model learns the distribution of one "domain" while only ever accessing snippets of the total available data. For example, each sample contains new real-world photographs of cats to classify. Assuming OCL only learns one task, OCL is a special case of IIL where each data point is seen in sequence.
 \begin{equation}
 	y^{(i)}=y^{(i+1)}, \mathbb{P}(y^{(i+1)}) = \mathbb{P}(y^{(i+1)}) \Rightarrow \mathbb{P}(Y^{(t)})=\mathbb{P}(y^{(i)})
 \end{equation}
-This is a special case of DIL where a model learns the distribution of one "domain" while only ever accessing snippets of the total available data. For example each sample contains new real-world photographs of cats to classify. Assuming OCL only learns one task, OCL is a special case of IIL where every data point is seen in sequence.\\
-\textit{Blurred Boundary continual learning} (BBCL), in contrast to all others so far, allows partially overlapping label spaces \cite{bidaki2025,LW}.\\
+
+\textit{Blurred Boundary continual learning} (BBCL), in contrast to all others so far, allows partially overlapping label spaces \cite{bidaki2025,LW}.
+
 \textit{Continual Pre-training} (CPT) aims to improve knowledge transfer with sequentially arriving pre-training data \cite{bidaki2025, LW}.
+
+As presented, CL can occur in various environments. The connecting problem is memorizing an old task without blocking out new ones and vice versa. In particular, after each training step, the neural network needs to update its weight parameters in a way that the new weights can describe the relationship between all $(y^{(i)}, X^{(i)})$ pairs.

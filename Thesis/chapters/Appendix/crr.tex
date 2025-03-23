@@ -1,32 +1,25 @@
-%%%%%%%%%%%%%%%%%%% Proof that CRR is biased %%%%%%%%%%%%%%%%%%%
-Let $D_1 = (X_1, y_1)$ and $D_2 = (X_2, y_2)$ be two independent linear regression problems, with $y_i \sim N(X_i w_i, \sigma_i^2 I), i \in \{1,2\}$.
-Begin with matrix form of $\hat{w_2}$:
+%%%%%%%%%%%%%%%%%%% Proof that CRR is unbiased %%%%%%%%%%%%%%%%%%%
+\begin{proof}
+Let $D_1 = (X^{(1)}, y^{(1)})$ and $D_2 = (X^{(2)}, y^{(2)})$ be two conditionally independent linear regression problems, with $y^{(i)} \sim N(X^{(i)} w^*, \sigma^2 I), i \in \{1,2\}$.
+Since $\hat{w}^{(1)}$ is estimated OLS, we already know that it is unbiased so we directly continue with derivation of $\hat{w}^{(2)}$:
+
 \begin{equation}
 	\begin{split}
-		\hat{w_2} &= \arg\min_{w_2} \frac{1}{n}\lVert y_2 - X_2^\top w_2\rVert_2^2 + \pen(w_2)  \Leftrightarrow \\
-		0 &= \nabla [\frac{1}{n}\lVert y_2 - X_2^\top w_2\rVert_2^2 + \pen(w_2)] \\
-		&= \nabla [\frac{1}{n} (y_2 - X_2w_2)^\top (y_2 - X_2w_2) + \lambda(w_2 - \hat{w_1})^\top (w_2 - \hat{w_1})] \\
-		&= -\frac{2}{n} X_2^\top Y_2 + \frac{2}{n} w_2X_2^\top X_2 + 2\lambda w_2 - 2\lambda \hat{w_1} \\
-		\hat{w_2} &= (X_2^\top X_2+\lambda n I)^{-1}(X_2^\top y_2 +\lambda n \hat{w_1})
+		\hat{w}^{(2)} &= \arg\min_{w} \frac{1}{n}\lVert y^{(2)} - X^{(2)\top} w\rVert_2^2 + \pen(w)  \Leftrightarrow \\
+		0 &= \nabla [\frac{1}{n}\lVert y^{(2)} - X^{(2)\top} w\rVert_2^2 + \pen(w)] \\
+		&= \nabla [\frac{1}{n} (y^{(2)} - X^{(2)}w)^\top (y^{(2)} - X^{(2)}w) + \lambda(w - \hat{w}^{(1)})^\top (w - \hat{w}^{(1)})] \\
+		&= -\frac{2}{n} X^{(2)\top} y^{(2)} + \frac{2}{n} wX^{(2)\top} X^{(2)} + 2\lambda w - 2\lambda \hat{w}^{(1)} \Rightarrow \\
+		\hat{w}^{(2)} &= (X^{(2)\top} X^{(2)}+\lambda n I)^{-1}(X^{(2)\top} y^{(2)} +\lambda n \hat{w}^{(1)})
 	\end{split}
 \end{equation}
-Continue with $\mathbb{E}[\hat{w_2}]$. Define $A := (X_2^\top X_2+\lambda n I)^{-1}$.
+Define $A := (X^{(2)\top} X^{(2)}+\lambda n I)^{-1}$, then $\mathbb{E}[\hat{w}^{(2)}]$ is
 \begin{equation}
 	\begin{split}
-		\mathbb{E}[\hat{w_2}] &= \mathbb{E}[(X_"^\top X_2+\lambda n I)^{-1}(X_2^\top y_2 +\lambda n \hat{w_1})] \\
-		&= A ( \lambda n \hat{w_1} + \mathbb{E}[X_2^\top(X_2 w_2 + e_2)] ) \\
-		&= A \lambda n \hat{w_1} + A X_2^\top X_2 \mathbb{E}[w_2] \\
-		&\neq \mathbb{E}[w_2]
+		\mathbb{E}[\hat{w}^{(2)}] &= \mathbb{E}[(X^{(2)\top} X^{(2)}+\lambda n I)^{-1}(X^{(2)\top} y_2 +\lambda n \hat{w}^{(1)})] \\
+		&= A \left( \mathbb{E}[X^{(2)\top}(X^{(2)} w^{(2)} + \varepsilon^{(2)})]  + \lambda n w^* \right) \\
+		&= A (X^{(2)\top} X^{(2)}w^* + \lambda n w^* ) \\
+		&= A A^{-1} w^* \\
+		&= w^*
 	\end{split}
 \end{equation}
-For $\lambda  = 0 \Rightarrow A = (X_2^\top X_2)^{-1} \Rightarrow \mathbb{E}(\hat{w_2}) = \mathbb{E}(w_2)$.\\
-
-
-End with $\mathbb{V}(\hat{w_2})$
-\begin{equation}
-	\begin{split}
-		\mathbb{V}(\hat{w_2}) &= \mathbb{V}(A (X_2^\top y_2 + \lambda n \hat{w_1})) \\
-		&= \mathbb{V}(y_2) A^\top X_2^\top X_2 A\\
-		&= \sigma_2^2I A^\top X_2^\top X_2 A
-	\end{split}
-\end{equation}.
+\end{proof}

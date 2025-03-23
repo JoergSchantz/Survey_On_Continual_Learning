@@ -5,60 +5,76 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: abbrvnat.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-Repeated entry---line 401 of file bibliography.bib
+Repeated entry---line 393 of file bibliography.bib
  : @misc{yoon2018lifelonglearningdynamicallyexpandable
  :                                                    ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1039 of file bibliography.bib
+I was expecting a `,' or a `}'---line 1031 of file bibliography.bib
  :  
  :  isbn="978-1-107-05713-5"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1043 of file bibliography.bib
+Repeated entry---line 1035 of file bibliography.bib
  : @misc{mirzadeh2020understandingroletrainingregimes
  :                                                   ,
 I'm skipping whatever remains of this entry
-Warning--empty publisher in SB
+I was expecting a `,' or a `}'---line 1205 of file bibliography.bib
+ :  
+ :  doi = "https://doi.org/10.1007/978-3-642-20192-9"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1227 of file bibliography.bib
+ : @misc{titsias2020functionalregularisationcontinuallearning
+ :                                                           ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "buchholz-2024" isn't style-file defined
+--line 1479 of file bibliography.bib
+Warning--empty journal in kashyap-2023
+Warning--empty year in kashyap-2023
+Warning--empty year in kashyap-2023
+Warning--empty year in buchholz-2024
+Warning--empty year in ibm2025
 Warning--empty booktitle in MCCLOSKEY1989109
-You've used 36 entries,
+Warning--can't use both author and editor fields in Sudmann2020
+You've used 49 entries,
             2773 wiz_defined-function locations,
-            791 strings with 12376 characters,
-and the built_in function-call counts, 17347 in all, are:
-= -- 1430
-> -- 1360
-< -- 13
-+ -- 457
-- -- 420
-* -- 1477
-:= -- 2720
-add.period$ -- 122
-call.type$ -- 36
-change.case$ -- 246
-chr.to.int$ -- 35
-cite$ -- 74
-duplicate$ -- 642
-empty$ -- 1244
-format.name$ -- 468
-if$ -- 3587
+            887 strings with 15590 characters,
+and the built_in function-call counts, 23753 in all, are:
+= -- 1987
+> -- 1803
+< -- 22
++ -- 608
+- -- 558
+* -- 2030
+:= -- 3731
+add.period$ -- 178
+call.type$ -- 49
+change.case$ -- 330
+chr.to.int$ -- 48
+cite$ -- 105
+duplicate$ -- 887
+empty$ -- 1713
+format.name$ -- 623
+if$ -- 4910
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 15
-newline$ -- 201
-num.names$ -- 144
-pop$ -- 569
+missing$ -- 23
+newline$ -- 283
+num.names$ -- 196
+pop$ -- 746
 preamble$ -- 1
-purify$ -- 212
+purify$ -- 284
 quote$ -- 0
-skip$ -- 623
+skip$ -- 835
 stack$ -- 0
-substring$ -- 218
-swap$ -- 59
-text.length$ -- 3
+substring$ -- 356
+swap$ -- 87
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 376
-warning$ -- 2
-while$ -- 116
+type$ -- 514
+warning$ -- 7
+while$ -- 161
 width$ -- 0
-write$ -- 474
-(There were 3 error messages)
+write$ -- 670
+(There were 5 error messages)

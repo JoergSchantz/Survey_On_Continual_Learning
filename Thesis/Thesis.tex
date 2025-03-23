@@ -5,8 +5,18 @@
 \usepackage{alltt}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{amsthm}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{setspace}
+
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\pen}{pen}
+\DeclareMathOperator{\relu}{ReLU}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\wdr}{WDR}
+\DeclareMathOperator{\kl}{KL}
 
 \newcommand{\mytitle}{Survey on Regularization Methods in Continual Learning}
 \newcommand{\myname}{Jörg Schantz}
@@ -36,8 +46,8 @@ bindingoffset = 0mm]{geometry}
 \setlength{\headheight}{14.5pt}
 \setlength{\parindent}{0pt}
 \interfootnotelinepenalty = 10000
-\usepackage{setspace}
-\onehalfspacing
+
+\doublespacing
 
 % ------------------------------------------------------------------------------
 % MAIN -------------------------------------------------------------------------
@@ -98,12 +108,7 @@ bindingoffset = 0mm]{geometry}
 	
 	\begin{abstract}
 		
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-		incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-		nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-		fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-		culpa qui officia deserunt mollit anim id est laborum. \cite{SB}
+		Continual learning (CL), also referred to as lifelong or incremental learning, aims to enable AI models to learn from sequentially arriving data without forgetting previously acquired knowledge. A fundamental challenge in CL is catastrophic forgetting, where new tasks interfere with past learning. Regularization-based methods provide a promising approach to mitigating this issue by imposing constraints on model updates. This thesis presents a survey of regularization techniques in CL, distinguishing between parameter-space and function-space regularization. Parameter-space methods, such as Elastic Weight Consolidation (EWC) and Synaptic Intelligence (SI), restrict parameter changes based on importance measures like the Fisher Information Matrix. Function-space approaches, including Learning without Forgetting (LwF) and Functional Regularization for Continual Learning (FRCL), aim to maintain consistency in model outputs. Additionally, sparse penalties and dynamically expandable architectures are explored as means to balance stability and plasticity. By analyzing the strengths and limitations of these methods, this thesis contributes to a deeper understanding of regularization in CL and its role in extracting importance measures in artificial neural networks (ANNs).
 		
 	\end{abstract}
 	
@@ -112,8 +117,8 @@ bindingoffset = 0mm]{geometry}
 	
 	%%%% if you would want to include material overview
 	%%%% use one of the following in addition
-	% \newpage
-	% \listoffigures
+	\newpage
+	\listoffigures
 	% \newpage
 	% \listoftables
 	\newpage
@@ -125,7 +130,7 @@ bindingoffset = 0mm]{geometry}
 	\section{Introduction}
 	\label{intro}
 	\input{chapters/introduction}
-	\section{Neural Networks}
+	\section{Neural Networks (NN)}
 	\label{nn}
 	\input{chapters/neuralnetworks}
 	\section{Framework}
@@ -143,7 +148,7 @@ bindingoffset = 0mm]{geometry}
 	\section{Regularization}
 	\label{reg0}
 	\input{chapters/Regularization/regularization}
-	\subsection{Regularization via Parameters}
+	\subsection{Regularization of Parameter Space}
 	\label{reg01}
 	\subsubsection{Quadratic Penalties}
 	\label{reg011}
@@ -151,6 +156,12 @@ bindingoffset = 0mm]{geometry}
 	\subsubsection{Sparse Penalties}
 	\label{reg012}
 	\input{chapters/Regularization/sparsepen}
+	\subsection{Regularization of Function Space}
+	\label{reg02}
+	\input{chapters/Regularization/functreg}
+	\section{Notes on Evaluation}
+	\label{eval}
+	\input{chapters/evaluation}
 	\section{Conclusion}
 	\label{conclusion}
 	\input{chapters/conclusion}
@@ -163,26 +174,19 @@ bindingoffset = 0mm]{geometry}
 	
 	\pagenumbering{Roman}
 	
-	\setcounter{page}{5} % CHANGE
+	\setcounter{page}{4} % CHANGE
 	
 	\appendix
 	
 	\section{Appendix}
 	\label{app}
-	\subsection{Expansion of eq. 2 in \cite{JK} for $T$ samples \eqref{ewcBayes}}
+	\subsection{Expansion of eq. 2 in \cite{JK} for \(t\) samples \eqref{ewcBayes}}
 	\label{ewcB}
 	\input{chapters/Appendix/ewcBayes}
-	\subsection{Proof that CRR is biased}
+	\subsection{CRR is unbiased}
 	\label{crr}
 	\input{chapters/Appendix/crr}
 		
-	\newpage
-	
-	\section{Electronic appendix}
-	\label{el_app}
-	
-	Data, code and figures are provided in electronic form.
-	
 	\newpage
 	
 	% ------------------------------------------------------------------------------

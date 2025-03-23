@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,11 +24,6 @@ R.~Aljundi, M.~Lin, B.~Goujaud, and Y.~Bengio.
   2019{\natexlab{b}}.
 \newblock URL \url{https://arxiv.org/abs/1903.08671}.
 
-\bibitem[Bach and Maloof(2010)]{SB}
-S.~H. Bach and M.~A. Maloof.
-\newblock \emph{A Bayesian Approach to Concept Drift}, pages 127--135.
-\newblock 2010.
-
 \bibitem[Benzing(2021)]{benzing2021unifyingregularisationmethodscontinual}
 F.~Benzing.
 \newblock Unifying regularisation methods for continual learning, 2021.
@@ -41,6 +36,15 @@ S.~A. Bidaki, A.~Mohammadkhah, K.~Rezaee, F.~Hassani, S.~Eskandari, M.~Salahi,
 \newblock Online continual learning: A systematic literature review of
   approaches, challenges, and benchmarks, 2025.
 \newblock URL \url{https://arxiv.org/abs/2501.04897}.
+
+\bibitem[Blei et~al.(2017)Blei, Kucukelbir, and McAuliffe]{Blei_2017}
+D.~M. Blei, A.~Kucukelbir, and J.~D. McAuliffe.
+\newblock Variational inference: A review for statisticians.
+\newblock \emph{Journal of the American Statistical Association}, 112\penalty0
+  (518):\penalty0 859–877, Apr. 2017.
+\newblock ISSN 1537-274X.
+\newblock \doi{10.1080/01621459.2017.1285773}.
+\newblock URL \url{http://dx.doi.org/10.1080/01621459.2017.1285773}.
 
 \bibitem[Chaudhry et~al.(2019)Chaudhry, Rohrbach, Elhoseiny, Ajanthan, Dokania,
   Torr, and Ranzato]{chaudhry2019}
@@ -76,7 +80,7 @@ I.~Evron, E.~Moroshko, R.~Ward, N.~Srebro, and D.~Soudry.
 
 \bibitem[Fahrmeir et~al.(2022)Fahrmeir, Kneib, Lang, and Marx]{Fahrmeir_2022}
 L.~Fahrmeir, T.~Kneib, S.~Lang, and B.~D. Marx.
-\newblock \emph{Regression - Models, Methods and Applications}.
+\newblock \emph{Regression: Models, Methods and Applications}.
 \newblock Springer Berlin, 2 edition, 2022.
 
 \bibitem[Fernando et~al.(2017)Fernando, Banarse, Blundell, Zwols, Ha, Rusu,
@@ -97,6 +101,42 @@ R.~M. French.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S1364661399012942}.
 
+\bibitem[given i=D()]{kashyap-2023}
+f.~given i=D, given=Dilip.
+\newblock What is chatgpt openai and how it is built: The methodology behind
+  it.
+\newblock URL
+  \url{https://levelup.gitconnected.com/what-is-chatgpt-openai-how-it-is-built-the-technology-behind-it-ba3e8acc1e9b}.
+
+\bibitem[given i=K()]{buchholz-2024}
+f.~given i=K, given=Katharina.
+\newblock The extreme cost of training ai models.
+\newblock URL
+  \url{https://www.forbes.com/sites/katharinabuchholz/2024/08/23/the-extreme-cost-of-training-ai-models/}.
+
+\bibitem[Gou et~al.(2021)Gou, Yu, Maybank, and Tao]{Gou_2021}
+J.~Gou, B.~Yu, S.~J. Maybank, and D.~Tao.
+\newblock Knowledge distillation: A survey.
+\newblock \emph{International Journal of Computer Vision}, 129\penalty0
+  (6):\penalty0 1789–1819, Mar. 2021.
+\newblock ISSN 1573-1405.
+\newblock \doi{10.1007/s11263-021-01453-z}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11263-021-01453-z}.
+
+\bibitem[Hassija et~al.(2024)Hassija, Chamola, and et~al.]{hassija2024}
+V.~Hassija, A.~Chamola, V.and~Mahapatra, and et~al.
+\newblock Interpreting black-box models: A review on explainable artificial
+  intelligence.
+\newblock \emph{Cogn Comput}, 16:\penalty0 45--74, Jan. 2024.
+\newblock \doi{10.1007/s12559-023-10179-8}.
+\newblock URL \url{https://doi.org/10.1007/s12559-023-10179-8}.
+
+\bibitem[Hinton et~al.(2015)Hinton, Vinyals, and
+  Dean]{hinton2015distillingknowledgeneuralnetwork}
+G.~Hinton, O.~Vinyals, and J.~Dean.
+\newblock Distilling the knowledge in a neural network, 2015.
+\newblock URL \url{https://arxiv.org/abs/1503.02531}.
+
 \bibitem[Huszár(2018)]{Husz_r_2018}
 F.~Huszár.
 \newblock Note on the quadratic penalties in elastic weight consolidation.
@@ -105,6 +145,11 @@ F.~Huszár.
 \newblock ISSN 1091-6490.
 \newblock \doi{10.1073/pnas.1717042115}.
 \newblock URL \url{http://dx.doi.org/10.1073/pnas.1717042115}.
+
+\bibitem[(I.)()]{ibm2025}
+I.~(I.).
+\newblock Neural network.
+\newblock URL \url{https://www.ibm.com/think/topics/neural-networks}.
 
 \bibitem[Javed and
   White(2019)]{javed2019metalearningrepresentationscontinuallearning}
@@ -135,6 +180,11 @@ H.~Li, J.~Wu, and V.~Braverman.
   2024.
 \newblock URL \url{https://arxiv.org/abs/2303.10263}.
 
+\bibitem[Li and Hoiem(2017)]{li2017learningforgetting}
+Z.~Li and D.~Hoiem.
+\newblock Learning without forgetting, 2017.
+\newblock URL \url{https://arxiv.org/abs/1606.09282}.
+
 \bibitem[Liu et~al.(2018)Liu, Masana, Herranz, de~Weijer, Lopez, and
   Bagdanov]{liu2018rotatenetworksbetterweight}
 X.~Liu, M.~Masana, L.~Herranz, J.~V. de~Weijer, A.~M. Lopez, and A.~D.
@@ -155,12 +205,26 @@ D.~Lopez-Paz and M.~Ranzato.
 \newblock Gradient episodic memory for continual learning, 2022.
 \newblock URL \url{https://arxiv.org/abs/1706.08840}.
 
+\bibitem[Ludkovski and Risk(2025)]{Ludkovski2025}
+M.~Ludkovski and J.~Risk.
+\newblock \emph{Gaussian Process Models for Quantitative Finance}.
+\newblock Springer Nature Switzerland, Cham, 2025.
+\newblock ISBN 978-3-031-80874-6.
+\newblock \doi{10.1007/978-3-031-80874-6}.
+\newblock URL \url{https://doi.org/10.1007/978-3-031-80874-6}.
+
 \bibitem[Mallya et~al.(2018)Mallya, Davis, and
   Lazebnik]{mallya2018piggybackadaptingsinglenetwork}
 A.~Mallya, D.~Davis, and S.~Lazebnik.
 \newblock Piggyback: Adapting a single network to multiple tasks by learning to
   mask weights, 2018.
 \newblock URL \url{https://arxiv.org/abs/1801.06519}.
+
+\bibitem[Matt and Matt(2024)]{matt2024}
+Matt and Matt.
+\newblock How much data is generated per day, 12 2024.
+\newblock URL
+  \url{https://www.digitalsilk.com/digital-trends/how-much-data-is-generated-per-day/}.
 
 \bibitem[Mcclelland et~al.(1995)Mcclelland, Mcnaughton, and
   O'Reilly]{Mcclelland1995}
@@ -206,6 +270,15 @@ S.~Shalev-Shwartz and S.~Ben-David.
 \newblock \emph{Understanding Machine Learing: From Theory to Algorithms}.
 \newblock Cambridge University Press, 2014.
 
+\bibitem[Sudmann(2020)]{Sudmann2020}
+A.~Sudmann.
+\newblock \emph{K{\"u}nstliche neuronale Netzwerke als Black Box}, pages
+  189--199.
+\newblock Springer Fachmedien Wiesbaden, Wiesbaden, 2020.
+\newblock ISBN 978-3-658-27852-6.
+\newblock \doi{10.1007/978-3-658-27852-6_10}.
+\newblock URL \url{https://doi.org/10.1007/978-3-658-27852-6_10}.
+
 \bibitem[Titsias et~al.(2020)Titsias, Schwarz, de~G.~Matthews, Pascanu, and
   Teh]{titsias2020functionalregularisationcontinuallearning}
 M.~K. Titsias, J.~Schwarz, A.~G. de~G.~Matthews, R.~Pascanu, and Y.~W. Teh.
@@ -223,11 +296,37 @@ G.~M. van~de Ven, T.~Tuytelaars, and A.~S. Tolias.
 \newblock \doi{10.1038/s42256-022-00568-3}.
 \newblock URL \url{https://doi.org/10.1038/s42256-022-00568-3}.
 
+\bibitem[Verwimp et~al.(2024)Verwimp, Aljundi, Ben-David, Bethge, Cossu,
+  Gepperth, Hayes, Hüllermeier, Kanan, Kudithipudi, Lampert, Mundt, Pascanu,
+  Popescu, Tolias, van~de Weijer, Liu, Lomonaco, Tuytelaars, and van~de
+  Ven]{verwimp2024continuallearningapplicationsroad}
+E.~Verwimp, R.~Aljundi, S.~Ben-David, M.~Bethge, A.~Cossu, A.~Gepperth, T.~L.
+  Hayes, E.~Hüllermeier, C.~Kanan, D.~Kudithipudi, C.~H. Lampert, M.~Mundt,
+  R.~Pascanu, A.~Popescu, A.~S. Tolias, J.~van~de Weijer, B.~Liu, V.~Lomonaco,
+  T.~Tuytelaars, and G.~M. van~de Ven.
+\newblock Continual learning: Applications and the road forward, 2024.
+\newblock URL \url{https://arxiv.org/abs/2311.11908}.
+
 \bibitem[Wang et~al.(2024)Wang, Zhang, Su, Zhu, Fellow, and IEEE]{LW}
 L.~Wang, X.~Zhang, H.~Su, J.~Zhu, Fellow, and IEEE.
 \newblock A comprehensive survey of continual learning: Theory and method and
   application, 2024.
 \newblock URL \url{https://arxiv.org/abs/2302.00487}.
+
+\bibitem[Wang et~al.(2022)Wang, Liu, Duan, and Tao]{Wang_Liu_Duan_Tao_2022}
+Z.~Wang, L.~Liu, Y.~Duan, and D.~Tao.
+\newblock Continual learning through retrieval and imagination.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence},
+  36\penalty0 (8):\penalty0 8594--8602, Jun. 2022.
+\newblock \doi{10.1609/aaai.v36i8.20837}.
+\newblock URL \url{https://ojs.aaai.org/index.php/AAAI/article/view/20837}.
+
+\bibitem[Welling(2009)]{welling_2009}
+M.~Welling.
+\newblock Herding dynamical weights to learn.
+\newblock In \emph{Proceedings of the 26th Annual International Conference on
+  Machine Learning}, volume 382, page 141, 06 2009.
+\newblock \doi{10.1145/1553374.1553517}.
 
 \bibitem[Yin et~al.(2021)Yin, Farajtabar, Li, Levine, and
   Mott]{yin2021optimizationgeneralizationregularizationbasedcontinual}

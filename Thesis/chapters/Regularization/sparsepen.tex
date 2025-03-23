@@ -1,3 +1,26 @@
 %%%%%%%%%%%%%%%%%%% Regularization via Parameters %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%% L1 Norm %%%%%%%%%%%%%%%%%%%
-The ridge like penalties provide control over a model's stability. Because their approximations become increasingly inaccurate with each new training step, they encourage smaller steps away from the current state of the model as training continues \cite{yin2021optimizationgeneralizationregularizationbasedcontinual}. All of the algorithms presented so far, imply that every parameters are, to some degree, useful across all tasks. \cite{jung2021continuallearningnodeimportancebased, yoon2018lifelonglearningdynamicallyexpandable} question this and suggest a Grouped-LASSO \cite{Fahrmeir_2022} penalty. The parameter groups are determined by the neurons they connect to or come from. This way the model can benefit from already established weights and simultaneously use free neurons to fit task specific parameters. In order to protect task individual neurons, \cite{yoon2018lifelonglearningdynamicallyexpandable} rely on multiple retraining of the same model to identify "empty" neurons. \\
+The Ridge-like penalties provide control over a model's stability. Because their approximations become increasingly inaccurate with each new training step, they encourage smaller steps away from the current state of the model as training continues \cite{yin2021optimizationgeneralizationregularizationbasedcontinual}. All of the algorithms presented so far imply that all parameters are, to some degree, useful across all tasks. \textit{Adaptive Group Sparsity based Continual Learning} (AGS-CL) \cite{jung2021continuallearningnodeimportancebased} and the \textit{Dynamically Expandable Network} algorithm (DEN) \cite{yoon2018lifelonglearningdynamicallyexpandable} question this and suggest a Grouped-LASSO penalty. The parameter groups are determined by the neurons they connect to or come from. This way the model can benefit from already established weights and simultaneously use free neurons to fit task specific parameters.
+
+%% AGGS_CL %%
+AGS-CL argues that a selective use of network nodes could be beneficial when dealing with unrelated tasks. Their idea is to influence model plasticity via Grouped-LASSO regularization. Similar to the already seen penalties, the AGS-CL algorithm makes use of an importance matrix $\Omega\in\mathbb{R}^{l\times \nu}$ to decide whether weights connecting to a node should be protected or not.
+\begin{equation}
+	\Omega^{(t)} = \Omega^{(t-1)} + \sum_{j=1}^{l}\sum_{k=1}^{\nu} \left[\frac{1}{n^{(t)}}\sum_{i=1}^{n^{(t)}}\relu_{j,k}(x_i^{(t)})\right]
+\end{equation}
+With $\relu_{j,k}(x) = \max(0, x)$ as the activation function of node $k$ in layer $j$, the task specific penalty term is then:
+\begin{equation}\label{agscl}
+	\begin{split}
+		\pen_{AGSCL}(W)= &\mu\sum_{j,k \leq l,\nu} \id(\Omega_{j,k}^{(t-1)} = 0)\lVert W_{j,k} \rVert_2 \\
+		&+ \lambda \sum_{j,k \leq l,\nu} \id(\Omega_{j,k}^{(t-1)} > 0)\lVert W_{j,k} - \hat{W}_{j,k}^{(t-1)}\rVert_2
+	\end{split}
+\end{equation}
+All nodes with importance 0 are penalized directly and thus their weights might get estimated to 0. Deviations from very important nodes, i.e. nodes with high $\Omega$-value, can be prevented completely due to the second penalty term.
+
+Note that AGS-CL relies on a fixed network structure. With increasing task number, the ability "to freeze" entire nodes could potentially stop learning all together, if new tasks are too unrelated to prior knowledge. For example, a classifier with $t$ output nodes needs to learn $t+1$ categories. 
+
+%% DEN %%
+DEN acknowledges this problem \cite{yoon2018lifelonglearningdynamicallyexpandable}. In order to provide a higher degree of plasticity, DEN identifies the task related sub-networks of the model and retrains it to evaluate if additional nodes are required to adequately adjust to the new data. To identify which established network parameters are useful to the new task, DEN uses a standard LASSO penalty on the weights directly connecting to the output layer. In case the sub-network's loss is too high, DEN gradually expands each layer with additional nodes, which are again selected via grouped-LASSO. The final network is then again estimated via Ridge-regularization as in \eqref{ridge}. 
+
+Overall DEN aims to keep a sparse network for individual tasks through the abuse of prior knowledge and simultaneously is able to adapt to unrelated tasks by expanding its network structure when needed. This relates DEN closely to methods that directly influence a network's structure and hints that the targeted combination of CL algorithms could balance out individual weaknesses. 
+
+Another way of controlling changes in a model arises when looking at its outputs. Such methods generally use some representation of the old model to guide the new learning process. Since CL has clear training stages, these approaches can be seen as offline knowledge distillation \cite{Gou_2021}, where the previous model acts like a teacher to the current one.

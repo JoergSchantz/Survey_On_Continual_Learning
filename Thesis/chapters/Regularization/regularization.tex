@@ -1,15 +1,18 @@
 %%%%%%%%%%%%%%%%%%% Regularization %%%%%%%%%%%%%%%%%%%
-As mentioned in \autoref{cf}, one way to address the stability-plasticity problem is the use of regularization. This approach adds a penalty term to the loss function of a model. Usually this penalty term depends on the model parameters. Later we will also see some methods that directly penalize the output of a model. I will begin by categorizing the regularization methods that I have found through out my research and present some selected examples. After this overview of current possibilities in regularization techniques and present attempts at unifying and generalizing them.\\
-In \cite{evron2022,li2024fixeddesignanalysisregularizationbased} the authors introduce a rudimentary approach to regularization in CL, \textit{ordinary conitunal learning}. It is used as a worst case comparison for their contribution to this field and is the basis for the upper bound on forgetting in \autoref{cf}.\\
-Despite its limitations, I believe that it is a beneficial to start this section with ordinary CL. It reduces the complexity of neural networks to two linear regression problems, which makes for a softer entry into the field.\\
-Assuming a CL problem with $T=2$ linear regression models $y^{(t)} = X^{(t)}w^* + \epsilon_t, \epsilon_t \sim N(0, \sigma^2), t \in \{1,2\}$, the task corresponding samples $D_t = (X^{(t)}, y^{(t)}) \in (\mathbb{R}^{n_t \times d}, \mathbb{R}^{n_t})$ and the commutable covariance matrices $\Sigma_t$. Then ordinary continual learning algorithm performs an ordinary least square (OLS) minimization over the first sample set $D_1$ to estimate the parameters $\hat{w}^{(1)} = (X^{(1)\top}X^{(1)})^{-1}X^{(1)\top} y^{(1)}$. In the second training sequence, ordinary CL fits $w^{(2)}$ to the residuals of task one with respect to $X^{(2)}$. The new parameters $\hat{w}^{(2)}$ are then:
+As mentioned in \autoref{cf}, one way to address the stability-plasticity problem is the use of regularization. This approach adds a penalty term to the loss function of a model. Usually this penalty term depends on the model parameters. Later we will also see some methods that directly penalize the output of a model. I will begin by categorizing the regularization methods that I have found through out my research and present some selected examples. After this overview of current possibilities in regularization techniques, I will present approaches at unifying and generalizing them.
+
+In \cite{evron2022,li2024fixeddesignanalysisregularizationbased} the authors introduce a rudimentary approach to regularization in CL, called \textit{ordinary conitunal learning}. It is used as a worst case comparison for their contribution to this field and is the basis for the upper bound on forgetting in \autoref{cf}.
+
+Despite its limitations, I believe that it is beneficial to start this section with ordinary CL. In the beginning I will reduce the complexity of continual learning to two subsequent linear regression problems, which simplifies the entry into the field.
+
+Ordinary continual learning \cite{evron2022,li2024fixeddesignanalysisregularizationbased, zhao2024statisticaltheoryregularizationbasedcontinual} assumes a CL problem with $T=2$ linear regression models $y^{(t)} = X^{(t)}w^* + \epsilon_t, \epsilon_t \sim N(0, \sigma^2), t \in \{1,2\}$, the task corresponding samples $D_t = (X^{(t)}, y^{(t)}) \in (\mathbb{R}^{n_t \times d}, \mathbb{R}^{n_t})$ and a covariance matrix of $\hat{w}^{(t)}$, $\Sigma_t = 1/n^{(t)} X^{(t)\top} X^{(t)}$. To estimate the first task parameters $\hat{w}^{(1)}$, ordinary continual learning algorithm performs an ordinary least square minimization over the first sample set $D_1$, i.e. $\hat{w}^{(1)} = (X^{(1)\top}X^{(1)})^{-1}X^{(1)\top} y^{(1)}$. In the second training sequence, ordinary continual learning fits $w^{(2)}$ to the residuals of task one with respect to $X^{(2)}$. The new parameters $\hat{w}^{(2)}$ are then:
 \begin{equation}
 	\hat{w}^{(2)} = \hat{w}^{(1)} + (X^{(2)\top}X^{(2)})^{-1}X^{(2)\top} (y^{(2)} - X^{(2)}\hat{w}^{(1)})
-\end{equation}.
-In their analysis of ordinary continual learning, \cite{li2024fixeddesignanalysisregularizationbased} show that it suffers from catastrophic forgetting when dealing with "dissimilar" tasks i.e. similarity is measured via the following bound:
-\begin{equation}
-	d_F \leq tr(\Sigma_1\Sigma_2^{-1})
 \end{equation}
-where $d_F$ is the expected forgetting rate between the two tasks.\\
-Due to the heavy assumptions made, especially that both minimization problems have the common solution $w^*$, ordinary CL is only applicable in DIL and IIL. This highlights the need for methodologies that control weight deviation when trying to combat forgetting in a less restrictive setting.
+In their analysis of ordinary continual learning,\citeauthor{zhao2024statisticaltheoryregularizationbasedcontinual} \cite{zhao2024statisticaltheoryregularizationbasedcontinual} show that it suffers from constant forgetting and provide the lower bound for its forgetting:
+\begin{equation}
+	F_t = \mathbb{E}(\lVert \hat{w}^{(t)} - w^* \rVert_2^2) \geq \frac{\sigma^2}{\lambda_{max}^{(t)}}
+\end{equation}
+where $\lambda_{max}^{(t)}$ maximum eigenvalue of $\Sigma_t$.
 
+Since the inverse of the negative Hessian of the neg-log likelihood of $\hat{w}^{(t)}$ is an estimator for $\Sigma_t$, ordinary CL a good example for the "worst case" of CL. Neither the maximum eigenvalue of nor the distance between old and new parameters are controlled, thus forgetting happens constantly. Ergo methodologies that control at least one of them are required.

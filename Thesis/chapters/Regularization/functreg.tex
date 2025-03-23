@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%% Regularization of Function Space %%%%%%%%%%%%%%%%%%%
+%% LwF %%
+\citeauthor{li2017learningforgetting} \cite{li2017learningforgetting} provide with \textit{Learning without Forgetting} (LwF) one of the earliest advances in this field. LwF assumes (multi-) image-classification tasks and specifies a logistic loss function $L(y, h(x)) = -y \log h(x)$ and the softmax activation function $h(x) = \exp(x_i)/\sum_{i\leq \#classes}\exp(x_i)$ in the output layer. In detail, LwF makes a prediction $y_o^{(t)}$, based on the old model, for the new sample before the next training cycle. These predictions are then used to penalize the fitted values $\hat{y}_o^{(t)}$ from the new model:
+\begin{equation}\label{LwF}
+	\pen_{LwF}(W) = \lambda \sum_{i = 1}^{\#classes}-y_{o,i}^{(t)} \log \hat{y}_{o,i}^{(t)}
+\end{equation}
+Considering the predefined loss above, then $\pen_{LwF}$ could be viewed as a 2nd parallel learner. It is important to note that $\hat{y}_o^{(t)}$ and $y_o^{(t)}$ are not the actual values but some weighted version of themselves, in order to help the new network to better approximate old outputs (Knowledge Distillation loss \cite{hinton2015distillingknowledgeneuralnetwork}). LwF also makes some structural adjustments with each training step by adding a number of fully connected neurons to the output layer if the new sample contains unseen class labels. Without this, the network would force predictions in the same label space for all tasks and thus not be able to adjust to the expanding multinomial distribution of $\mathbb{P}(Y^{(t)}) = \prod_{i = 1}^{t}\mathbb{P}(y^{(i)})$.
+
+%% DRI %%
+Instead of relying on an estimate of the previous true fitted values $\hat{y}^{(1)}, ..., \hat{y}^{(t-1)}$, \citeauthor{Wang_Liu_Duan_Tao_2022} \cite{Wang_Liu_Duan_Tao_2022} suggest with \textit{Deep Retrieval and Imagination} (DRI) storing a small sample $M$ of all previous tasks. In their work, they also focus on image classification with known labels (CIL or DIL). To ensure that $M$ is representative of all $t-1 + 1$ tasks, the authors use a resampling strategy inspired by \citeauthor{welling_2009} \cite{welling_2009} when adding new data points to it. During training DRI does not only aim to learn the combined sample $D^{(t)} \cup M$ but also just $M$. The additional penalty terms center new model outputs of already seen tasks around their previous fittings, which are calculated on a copy of the old model.
+\begin{equation}\label{dri}
+	\begin{split}
+		\hat{W}^{(t)} = &\arg\min_{W} L(W, D^{(t)} \cup M)\\
+		&+ \beta L(W, M) + \frac{\alpha}{n^{(M)}}\sum_{i}^{n^{(M)}}\lVert f(W, x_i^{(M)}) - f(W^{(t-1)}, x_i^{(M)}) \rVert_2^2
+	\end{split}
+\end{equation}
+In their work \citeauthor{Wang_Liu_Duan_Tao_2022} come to a very similar conclusion, as \citeauthor{yin2021optimizationgeneralizationregularizationbasedcontinual} \cite{yin2021optimizationgeneralizationregularizationbasedcontinual} in their analysis of generalized l2 penalties in CL. The discrepancy between the true joint training error and their surrogate loss consists yet again of an approximation error and a finite-sample effect. They alleviate the approximation error by padding $M$ with generated data from itself.
+
+%% FRCL %%
+\setlength{\parindent}{20pt}
+As a final example for function space regularization, I want to present the \textit{functional regularization for continual learing} (FRCL) algorithm by \citeauthor{titsias2020functionalregularisationcontinuallearning} \cite{titsias2020functionalregularisationcontinuallearning}. They take a Bayesian perspective on NN, such that the model outputs $\hat{y}^{(t)}$ are a random vector depending on the output function $f^{(t)}(\cdot)$. In contrast to prior Bayesian approaches to CL, FRCL only focuses on the outermost parameter layer, connecting to the output, and optimizes everything else: $f^{(t)}(x^{(t)}) = w^{(t)\top} g(x^{(t)}; \theta)$ where $g(x;\theta)$ is the composition of all hidden layers and their parameters $\theta$. In each training step, they approximate the task specific output distributions $\mathbb{P}(y^{(i)})$ with a Gaussian Process (GP) \cite{Ludkovski2025} $p(y^{(t)}|f^{(t)}(X^{(t)}))$ and store a small collection of its inducing points $\tilde{D}_t=(\tilde{X}^{(t)}, \tilde{y}^{(t)} = f^{(t)}(\tilde{X}^{(t)})\in \mathbb{R}^{d\times m^{(t)}}\times \mathbb{R}^{m^{(t)}} $. These inducing points are found via minimizing the Kullback-Leibler divergence KL from their approximated distribution to the true GP. The base line model then minimizes 
+\begin{equation}\label{bFrcl}
+	L^{(t)}(\theta, w) = L_t(D^{(t)}, w^{(t)}, \theta) + \sum_{i=1}^{t-1}\frac{n^{(i)}}{m^{(i)}}  L_i(\tilde{D}_i,w^{(i)}, \theta)
+\end{equation}
+where each $L_i$ is a task specific loss and $m^{(i)}$ the size of the inducing sample of task $i$.
+This approach makes a couple of assumptions and approximations about different parts of the network, which will be summarized in the remaining part of this subsection, as well as a non-trivial transformation to get to the explicit loss function.
+
+\setlength{\parindent}{0pt}
+\citeauthor{titsias2020functionalregularisationcontinuallearning} begin by assuming a normal prior on the outer-layer parameters $p_\theta(w^{(t)}) = N(0, \sigma^2_wI)$ with its variational approximation $q(w^{(t)}) = N(w^{(t)}|\mu_{w^{(t)}}, \Sigma_{w^{(t)}})$, as well as a linear kernel \cite{Ludkovski2025} $K_{X^{(t)}} = \sigma_w^2g(X^{(t)};\theta)^\top g(X^{(t)};\theta)$ for the network. Where $\mu_{w^{(t)}} \in \mathbb{R}^t$ and $\Sigma_{w^{(t)}} = C_{w^{(t)}}C_{w^{(t)}}^\top$ with $C_{w^{(t)}}$ is a square lower triangular matrix with positive diagonal elements. With this, the general posterior distribution over all function values is
+\begin{equation}
+	p(y^{(t)}|f^{(t)}(X^{(t)})) = \int p\left(y^{(t)}|w^{(t)\top} g(x^{(t)};\theta)\right)q(w^{(t)}) dw^{(t)}
+\end{equation}
+The authors acknowledge that regularization could already happen with this expression of the posterior. They argue that it would be a very expensive process and make use of the above mentioned approximation via inducing points $\tilde{D}_t$ to reduce the required storage space per task. These points are learned by minimizing the Kullback-Leibler divergence KL from $q(w^{(t)})$ to $p_\theta(w^{(t)})$. Now the task specific loss $L_t$ becomes the evidence lower bound (ELBO) \cite{Blei_2017} for $D_t$ and is maximized over $\theta$ and $q(w^{(t)})$. The authors transform the ELBO to the following equation, referencing multiple other papers. For convenience $w^{(t)\top} g(x^{(t)};\theta)$ will be referred to as $f^{(t)}$ further on.
+\begin{equation}\label{elbo}
+	L_t(\theta, q(w^{(t)})) = \sum_{i=1}^{n^{(t)}} \mathbb{E}_{q(w^{(t)})}\left[\log p(y_i^{(t)}|f_i^{(t)})\right] - \kl\left(q(w^{(t)})\Vert p_\theta(w^{(t)})\right)
+\end{equation}
+After this set up, we can focus on summarizing the last step, finding the penalty term for FRCL. Considering the learned inducing points $\tilde{D}_t$ and the joint distribution \(p(y^{(t)}, f^{(t)},\allowbreak \tilde{y}^{(t)})\), the true posterior can now be written as 
+\begin{equation}
+	p(y^{(t)}|f^{(t)}) = p_\theta(f^{(t)}|\tilde{y}^{(t)}, y^{(t)})p_\theta(\tilde{y}^{(t)}|y^{(t)})
+\end{equation}
+
+which can now be approximated by the GP $p_\theta(f^{(t)}| \tilde{y}^{(t)})q(\tilde{y}^{(t)})$, with $p_\theta(f^{(t)}|\tilde{y}^{(t)}) = N(f^{(t)}|\mu_{f^{(t)}},\allowbreak \Sigma_{f^{(t)}})$ and $q(\tilde{y}^{(t)}) = N(\tilde{y}^{(t)}|\mu_{\tilde{y}^{(t)}}, C_{\tilde{y}^{(t)}}C_{\tilde{y}^{(t)}}^\top)$, only depending on the variational distribution over $\tilde{y}^{(t)}$. Thus FRCL needs new task samples to be able to explain the approximated posteriors $q(\tilde{y}^{(t)})$ of every prior tasks so far seen. This leads to the penalty term:
+\begin{equation}\label{penElbo}
+	\pen_{FRCL}(\theta, q(w^{(t)})) = - \sum_{j=1}^{t-1}\kl(q(\tilde{y}^{(j)})\Vert p_\theta(\tilde{y}^{(j)}))
+\end{equation}
+with $p_\theta(\tilde{y}^{(t)}) = N(\tilde{y}^{(t)}|0, K_{\tilde{X}^{(t)}})$. Recalling that $\tilde{y}^{(t)}$ still depends on the distribution over $w^{(t)}$, its distributional parameters are $\mu_{\tilde{y}^{(t)}} = g(\tilde{X}^{(t)}; \theta)^\top \mu_{w^{(t)}}$ and $C_{\tilde{y}^{(t)}} = g(\tilde{X}^{(t)}; \theta)^\top C_{w^{(t)}}$. Ultimately, the algorithm stores $(\tilde{X}^{(t)}, \mu_{\tilde{y}^{(t)}}, C_{\tilde{y}^{(t)}})$ to memorize task $t$ for future training cycles.
+
+As we have seen, FRCL mitigates forgetting via saving an approximate posterior of the current task's probability distribution and regularizes coming tasks through a KL penalty term. The authors acknowledge that their approach has similarities to replay-based methods, further strengthening the assumption that a combination of different methods could be the key to successful CL.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.29)  21 MAR 2025 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.29)  10 APR 2025 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -673,12 +673,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \beamer@dimb=\dimen293
 )
 (E:\MikTex\tex/latex/beamer\beamerouterthemedefault.sty)))
-(E:\MikTex\tex/latex/beamer\beamerthemeHannover.sty
-(E:\MikTex\tex/latex/beamer\beamerouterthemesidebar.sty
-\beamer@sidebarwidth=\dimen294
-\beamer@headheight=\dimen295
-)
-(E:\MikTex\tex/latex/beamer\beamercolorthemeseahorse.sty)
+(E:\MikTex\tex/latex/beamer\beamerthemePittsburgh.sty
 (E:\MikTex\tex/latex/beamer\beamerinnerthemecircles.sty))
 (E:\MikTex\tex/latex/base\alltt.sty
 Package: alltt 2021/01/29 v2.0g defines alltt environment
@@ -734,8 +729,8 @@ LaTeX Info: Redefining \genfrac on input line 149.
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count337
 \calc@Bcount=\count338
-\calc@Adimen=\dimen296
-\calc@Bdimen=\dimen297
+\calc@Adimen=\dimen294
+\calc@Bdimen=\dimen295
 \calc@Askip=\skip65
 \calc@Bskip=\skip66
 LaTeX Info: Redefining \setlength on input line 80.
@@ -745,15 +740,15 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 \inf@bad=\count340
 \maxint=\count341
-\listwidth=\dimen298
-\eqnumsep=\dimen299
-\eqmargin=\dimen300
+\listwidth=\dimen296
+\eqnumsep=\dimen297
+\eqmargin=\dimen298
 \eqlinespacing=\skip68
 \eqlineskip=\skip69
-\eqlineskiplimit=\dimen301
+\eqlineskiplimit=\dimen299
 \eqbinoffset=\muskip18
 \eqdelimoffset=\muskip19
-\eqindentstep=\dimen302
+\eqindentstep=\dimen300
 \eqstyle=\toks46
 \eqbreakdepth=\count342
 \eqinterlinepenalty=\count343
@@ -770,31 +765,31 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \EQ@box=\box77
 \EQ@copy=\box78
 \EQ@numbox=\box79
-\eq@wdNum=\dimen303
+\eq@wdNum=\dimen301
 \GRP@numbox=\box80
-\grp@wdNum=\dimen304
+\grp@wdNum=\dimen302
 \eq@lines=\count347
 \eq@curline=\count348
 \eq@badness=\count349
 \EQ@vims=\count350
-\eq@dp=\dimen305
-\eq@wdL=\dimen306
-\eq@wdT=\dimen307
-\eq@wdMin=\dimen308
-\grp@wdL=\dimen309
-\grp@wdR=\dimen310
-\grp@wdT=\dimen311
-\eq@wdRmax=\dimen312
-\eq@firstht=\dimen313
-\eq@wdCond=\dimen314
-\eq@indentstep=\dimen315
-\eq@linewidth=\dimen316
-\grp@linewidth=\dimen317
-\eq@hshift=\dimen318
-\eq@given@sidespace=\dimen319
-\mathindent=\dimen320
+\eq@dp=\dimen303
+\eq@wdL=\dimen304
+\eq@wdT=\dimen305
+\eq@wdMin=\dimen306
+\grp@wdL=\dimen307
+\grp@wdR=\dimen308
+\grp@wdT=\dimen309
+\eq@wdRmax=\dimen310
+\eq@firstht=\dimen311
+\eq@wdCond=\dimen312
+\eq@indentstep=\dimen313
+\eq@linewidth=\dimen314
+\grp@linewidth=\dimen315
+\eq@hshift=\dimen316
+\eq@given@sidespace=\dimen317
+\mathindent=\dimen318
 \eq@final@linecount=\count351
-\eq@wdR=\dimen321
+\eq@wdR=\dimen319
 \EQ@continue=\toks47
 \lr@level=\count352
 \GRP@queue=\toks48
@@ -812,14 +807,14 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (E:\MikTex\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen322
-\captionmargin=\dimen323
-\caption@leftmargin=\dimen324
-\caption@rightmargin=\dimen325
-\caption@width=\dimen326
-\caption@indent=\dimen327
-\caption@parindent=\dimen328
-\caption@hangindent=\dimen329
+\caption@tempdima=\dimen320
+\captionmargin=\dimen321
+\caption@leftmargin=\dimen322
+\caption@rightmargin=\dimen323
+\caption@width=\dimen324
+\caption@indent=\dimen325
+\caption@parindent=\dimen326
+\caption@hangindent=\dimen327
 Package caption Info: beamer document class detected.
 
 (E:\MikTex\tex/latex/caption\caption-beamer.sto
@@ -850,8 +845,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (E:\MikTex\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen330
-\pgf@nodesepend=\dimen331
+\pgf@nodesepstart=\dimen328
+\pgf@nodesepend=\dimen329
 )
 (E:\MikTex\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
@@ -859,8 +854,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (E:\MikTex\tex/latex/pgf/utilities\pgffor.sty
 (E:\MikTex\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen332
-\pgffor@skip=\dimen333
+\pgffor@iter=\dimen330
+\pgffor@skip=\dimen331
 \pgffor@stack=\toks49
 \pgffor@toks=\toks50
 ))
@@ -870,16 +865,16 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (E:\MikTex\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count359
-\pgfplotmarksize=\dimen334
+\pgfplotmarksize=\dimen332
 )
-\tikz@lastx=\dimen335
-\tikz@lasty=\dimen336
-\tikz@lastxsaved=\dimen337
-\tikz@lastysaved=\dimen338
-\tikz@lastmovetox=\dimen339
-\tikz@lastmovetoy=\dimen340
-\tikzleveldistance=\dimen341
-\tikzsiblingdistance=\dimen342
+\tikz@lastx=\dimen333
+\tikz@lasty=\dimen334
+\tikz@lastxsaved=\dimen335
+\tikz@lastysaved=\dimen336
+\tikz@lastmovetox=\dimen337
+\tikz@lastmovetoy=\dimen338
+\tikzleveldistance=\dimen339
+\tikzsiblingdistance=\dimen340
 \tikz@figbox=\box84
 \tikz@figbox@bg=\box85
 \tikz@tempbox=\box86
@@ -902,27 +897,34 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (E:\MikTex\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(E:\MikTex\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip76
+\bibsep=\skip77
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count368
 ) (template_Beamer.aux)
 \openout1 = `template_Beamer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -932,14 +934,14 @@ LaTeX Font Info:    ... okay on input line 34.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(59.22636pt, 290.74263pt, 14.22636pt)
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=290.74263pt
+* \textwidth=307.28987pt
 * \textheight=244.6939pt
-* \oddsidemargin=-13.04362pt
-* \evensidemargin=-13.04362pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -960,83 +962,91 @@ LaTeX Font Info:    ... okay on input line 34.
 
 (E:\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count368
-\scratchdimen=\dimen343
+\scratchcounter=\count369
+\scratchdimen=\dimen341
 \scratchbox=\box88
-\nofMPsegments=\count369
-\nofMParguments=\count370
+\nofMPsegments=\count370
+\nofMParguments=\count371
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count371
-\MPscratchDim=\dimen344
-\MPnumerator=\count372
-\makeMPintoPDFobject=\count373
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen342
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
 \everyMPtoPDFconversion=\toks52
 ) (E:\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(E:\MikTex\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (E:\MikTex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 34.
+Package hyperref Info: Link coloring OFF on input line 46.
  (template_Beamer.out)
 (template_Beamer.out)
 \@outlinefile=\write5
 \openout5 = `template_Beamer.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 34.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 46.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 46.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 34.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 46.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 34.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 34.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 46.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 34.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 34.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 46.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 34.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 34.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 46.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 34.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 46.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 34.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 34.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 34.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 34.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 34.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 46.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 34.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 34.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 46.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 46.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 3
-4.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 4
+6.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 3
-4.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 4
+6.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 34.
+ut line 46.
 
 (E:\MikTex\tex/latex/translator\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
@@ -1058,10 +1068,10 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-(template_Beamer.nav) [1{C:/Users/joerg/AppData/Local/MiKTeX/fonts/map/pdftex/p
-dftex.map}
+(template_Beamer.nav) [1
 
-] (template_Beamer.toc) [2
+{C:/Users/joerg/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (template_Be
+amer.toc) [2
 
 ] [3
 
@@ -1079,10 +1089,71 @@ dftex.map}
 
 ] [10
 
-] [11
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 182
+.
+
+(E:\MikTex\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 182
+.
+ (E:\MikTex\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 182.
+
+(E:\MikTex\tex/latex/sansmathaccent\ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) [11
+
+] [12
+
+] [13
+
+] [14
 
 ]
-[12
+[15
+
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+
+]
+(template_Beamer.bbl
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1.
+
+) [27
+
+] [28
+
+
+] [29
+
 
 ]
 \tf@nav=\write6
@@ -1100,22 +1171,28 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `template_Beamer.out' has not changed.
-(rerunfilecheck)             Checksum: 88C97AA6D7D6A326732EC4476C07E99D;1369.
+(rerunfilecheck)             Checksum: 63792625272DC42302021AA7EC4D9A00;770.
  ) 
 Here is how much of TeX's memory you used:
- 26886 strings out of 474485
- 519594 string characters out of 5760148
- 1943542 words of memory out of 5000000
- 48629 multiletter control sequences out of 15000+600000
- 560186 words of font info for 43 fonts, out of 8000000 for 9000
+ 27400 strings out of 474485
+ 526092 string characters out of 5760148
+ 1940542 words of memory out of 5000000
+ 49068 multiletter control sequences out of 15000+600000
+ 569800 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,411b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<E:/MikTex/fonts/type1/public/amsfonts/cm/cmss10.pfb><E:/MikTex/fonts/type1/p
-ublic/amsfonts/cm/cmss12.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmss8.pf
-b>
-Output written on template_Beamer.pdf (12 pages, 137448 bytes).
+ 128i,18n,123p,413b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<E:/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><E:/MikTex/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/MikTex/fonts/type1/pu
+blic/amsfonts/cm/cmss10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmss12.pf
+b><E:/MikTex/fonts/type1/public/amsfonts/cm/cmss8.pfb><E:/MikTex/fonts/type1/pu
+blic/amsfonts/cm/cmssi10.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmssi8.p
+fb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/MikTex/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb><E:/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on template_Beamer.pdf (29 pages, 321358 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 917 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

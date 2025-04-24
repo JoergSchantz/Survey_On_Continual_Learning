@@ -1,6 +1,6 @@
 \documentclass{beamer}
-\usetheme{Hannover}
-% \setbeamertemplate{footline}[frame number]
+\usetheme{Pittsburgh}
+
 \usepackage[]{graphicx}
 \usepackage[]{color}
 \usepackage{alltt}
@@ -11,6 +11,7 @@
 \usepackage{subcaption}
 \usepackage{tikz}
 \usepackage{setspace}
+\usepackage[numbers, sort&compress]{natbib}
 
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\pen}{pen}
@@ -18,6 +19,17 @@
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\wdr}{WDR}
 \DeclareMathOperator{\kl}{KL}
+
+\AtBeginSection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+			\usebeamerfont{title}\insertsectionhead\par%
+		\end{beamercolorbox}
+		\vfill
+	\end{frame}
+}
 
 \newcommand{\mytitle}{Survey on Regularization Methods in Continual Learning}
 \newcommand{\myname}{Jörg Schantz}
@@ -27,77 +39,382 @@
 \title{\mytitle}
 \author{Jörg Schantz}
 \institute{Ludwig-Maximilian Universität München}
-\date{April 4, 2025}
+\date{April 10, 2025}
 
 
 
 \begin{document}
 \begin{frame}
-    \maketitle
-    \centering
-    Supervised by \mysupervisor
+
+	\centering{
+		\large{
+			Bachelor's Thesis
+		}	
+	}
+	\titlepage
+	\centering{
+		\small{
+			Supervised by \mysupervisor
+		}	
+	}
+    
 \end{frame}
 \begin{frame}{Outline}
     \tableofcontents
 \end{frame}
 
+\setbeamertemplate{footline}[frame number]
+
 \section{Introduction}
-
-\begin{frame}{Intro}
-
+\begin{frame}[t]{Introduction}
+	\textit{What is Continual Learning (CL)?}
+	
+	\vspace{0.25cm}
+	\quad - Training a model with sequentially arriving data \cite{LW}
+		
 \end{frame}
 
-\section{Framework}
-
-\begin{frame}{Framework}
+\begin{frame}[t]{Introduction}
+	\textit{What is Continual Learning (CL)?}
+	
+	\vspace{0.25cm}
+	\quad - Training a model with sequentially arriving data \cite{LW}
+	
+	\vspace{0.5cm}
+	\textit{Why is CL important?}
+	
+	\vspace{0.25cm}
+	\quad - Cost-effectiveness of training large models and physical
+	
+	\quad limitations, such as memory \cite{buchholz-2024}
 	
 \end{frame}
 
-\section{Stability-Plasticity-Dilemma}
+\begin{frame}[t]{Introduction}
+	\textit{What is Continual Learning (CL)?}
+	
+	\vspace{0.25cm}
+	\quad - Training a model with sequentially arriving data \cite{LW}
+	
+	\vspace{0.5cm}
+	\textit{Why is CL important?}
+	
+	\vspace{0.25cm}
+	\quad - Cost-effectiveness of training large models and physical 
+	
+	\quad limitations, such as memory \cite{buchholz-2024}
+	
+	\vspace{0.5cm}
+	\textit{What's the catch?}
+	
+	\vspace{0.25cm}
+	\quad - Preserving old information about the model without inhibiting 
+	
+	\quad new learning and v.v. \cite{LW}
+\end{frame}
 
-\begin{frame}{Stability-Plasticity Dilemma}
+\begin{frame}[t]{Introduction}
+	\vspace{0.5cm}
+	\textit{How is catastrophic forgetting handled via Regularization?}
+	
+	\vspace{0.25cm}
+	\quad - (In-)direct parameter penalties: restrict movement in Output- 
+	
+	\quad or Parameter-space
+	
+	\vspace{0.25cm}
+	\quad - Regularization requires some degree of task similarity to be
+	
+	\quad successful
+			
+\end{frame}
+
+\section{CL Environment}
+
+\begin{frame}[t]{CL Environment}
+	\textit{Which type of model/agent/learner is used?}
+	
+	\vspace{0.25cm}
+	\quad - Typically neural networks
 	
 \end{frame}
 
-\section{Measuring Feature Importance}
-
-\begin{frame}{Measuring Feature Importance}
+\begin{frame}[t]{CL Environment}
+	\textit{Which type of model/agent/learner is used?}
+	
+	\vspace{0.25cm}
+	\quad - Typically neural networks
+	
+	\vspace{0.5cm}
+	\textit{What is a continual learner? \cite{LW}} 
+	
+	\vspace{0.25cm}
+	\quad - Models the joint probability distribution over all tasks
+	
+	\quad - Each sample is assumed to be conditionally independent
+	
+	\quad - Can only access current sample, all else are unavailable
 	
 \end{frame}
 
-\section{Linear Continual Learning}
-
-\begin{frame}{Linear Continual Learning}
+\begin{frame}[t]{CL Environment}
+	\textit{Which type of model/agent/learner is used?}
+	
+	\vspace{0.25cm}
+	\quad - Typically neural networks
+	
+	\vspace{0.5cm}
+	\textit{What is a continual learner? \cite{LW}}
+	
+	\vspace{0.25cm}
+	\quad - Models the joint probability distribution over all tasks
+	
+	\quad - Each sample is assumed to be conditionally independent
+	
+	\quad - Can only access current sample, all else are unavailable
+	
+	\vspace{0.5cm}
+	\textit{Can we quantify forgetting?}
+	
+	\vspace{0.25cm}
+	\quad - Upper bound: $F_t \leq 0.5 * \lambda^{max}_t\lVert \Delta W \rVert ^2$ \cite{mirzadeh2020understandingroletrainingregimes}
 	
 \end{frame}
 
-\section{Other Squared Penalties}
-
-\begin{frame}{Other Squared Penalties}
+\section{Explored Methods}
+\begin{frame}[t]{Explored Methods}
+	\textit{Elastic Weight Consolidation (EWC)\cite{JK}} 
 	
+	\vspace{0.25cm}	
+	\quad - Direct parameter penalty
+	
+	\vspace{0.25cm}	
+	\quad - Bayesian View of Parameters 
+	
+	\vspace{0.25cm}
+	\quad - Approximate the parameters old posterior with a normal 
+	
+	\quad distribution
+	
+	\vspace{0.25cm}
+	\quad - Mean is estimated parameters and variance is inverted diagonal 
+	
+	\quad Fisher Information Matrix
+	
+	\vspace{0.25cm}
+	\quad - $\pen_{EWC}(w) = \frac{\lambda}{2}(w-\hat{w}^{(t-1)})^\top F (w-\hat{w}^{(t-1)})$
+
 \end{frame}
 
-\section{LASSO Inspired Penalties}
-
-\begin{frame}{LASSO Inspired Penalties}
+\begin{frame}[t]{Explored Methods}
+	\textit{Adaptive Group Sparsity based Continual Learning (AGS-CL) \cite{jung2021continuallearningnodeimportancebased}}
 	
+	\vspace{0.25cm}	
+	\quad - Direct parameter penalty
+	
+	\vspace{0.25cm}
+	\quad - Uses Grouped-LASSO penalty
+	
+	\vspace{0.25cm}	
+	\quad - Determines Importance based on node activation 
+	
+	\vspace{0.25cm}
+	\quad - Node Importance decides if Grouped-LASSO is centered 
+	
+	\quad around 0 or old weights
+
 \end{frame}
 
-\section{Output Penalties}
-
-\begin{frame}{Output Penalties}
+\begin{frame}[t]{Explored Methods}
+	\textit{Functional Regularization for Continual Learning (FRCL)\cite{titsias2020functionalregularisationcontinuallearning}}
 	
+	\vspace{0.25cm}	
+	\quad - Indirect parameter penalty
+	
+	\vspace{0.25cm}	
+	\quad - Uses Gaussian Process to approximate posterior of the old
+	
+	\quad labels
+	
+	\vspace{0.25cm}
+	\quad - Stores inducing points and distribution parameters for all old 
+	
+	\quad tasks
+	
+	\vspace{0.25cm}
+	\quad - Penalizes deviations from old posteriors via KL-Divergence
+
+\end{frame}
+
+\begin{frame}[t]{Explored Methods}
+	\textit{Other Methods}
+	
+	\vspace{0.25cm}
+	\quad - Continual Ridge Regression \cite{li2024fixeddesignanalysisregularizationbased}
+	
+	\quad - Generalized l2-regression \cite{zhao2024statisticaltheoryregularizationbasedcontinual}
+	
+	\quad - Synaptic Intelligence \cite{zenke2017continuallearningsynapticintelligence}
+	
+	\quad - Memory Aware Synapses \cite{aljundi2018memoryawaresynapseslearning}
+	
+	\quad - Dynamically Expandable Network \cite{yoon2018lifelonglearningdynamicallyexpandable}
+
+	\quad - Learning without Forgetting \cite{li2017learningforgetting}
+
+	\quad - Deep Retrieval and Imagination \cite{Wang_Liu_Duan_Tao_2022}
+
+\end{frame}
+
+\section{Results}
+
+\begin{frame}[t]{Results}
+	\textit{Weighted Ridge Penalties}
+	
+	\vspace{0.25cm}
+	\quad - Make use of importance measures (IM) to penalize shifts from
+	
+	\quad previous parameters
+	
+	\quad - All presented methods use approximations of the FIM or
+	
+	\quad Hessian of the loss as IM
+	
+	\quad - Ensures stability but hinders plasticity
+\end{frame}
+
+\begin{frame}[t]{Results}
+	\textit{Ridge-like \& other quadratic Penalties}
+	
+	\vspace{0.25cm}
+	\quad - Make use of importance measures (IM) to penalize shifts from
+	
+	\quad previous parameters
+	
+	\quad - All presented methods use approximations of the FIM or
+	
+	\quad Hessian of the loss as IM
+	
+	\quad - Ensures stability but hinders plasticity
+	
+	\vspace{0.5cm}
+	\textit{LASSO inspired Penalties}
+	
+	\vspace{0.25cm}
+	\quad - Also use IM to identify important parameters
+	
+	\quad - Depending on IM they impose (Grouped-)LASSO penalties on
+	
+	\quad nodes
+	
+	\quad - Slows down learning decline while maintaining stability
+		
+\end{frame}
+
+\begin{frame}[t]{Results}
+	\textit{Output-based Penalties}
+	
+	\vspace{0.25cm}
+	\quad - Simulate/ store old data
+	
+	\quad - penalize movement in the output-space 
+	
+	\quad - mimic learning the "true" model
+	
+	\quad - penalize shifts in posterior of $y$
 \end{frame}
 
 \section{Conclusion}
 
-\begin{frame}{Conclusion}
+\begin{frame}[t]{Conclusion}
+	\textit{What have I learned?}
+	
+	\vspace{0.5cm}
+	\quad - Regularization can mitigate forgetting
+	
+	\vspace{0.25cm}
+	\quad - Too much stability hinders "life-long" learning and task variety
+	
+	\vspace{0.25cm}
+	\quad - To keep learning, models need structural updates or focus on 
+	
+	\quad similar tasks
+	
+	\vspace{0.25cm}
+	\quad - Mostly differ from the "true" loss by an approximation error
+
+\end{frame}
+
+\begin{frame}[t]{Conclusion}
+	\textit{What have I learned?}
+	
+	\vspace{0.5cm}
+	\quad - Regularization can mitigate forgetting
+	
+	\vspace{0.25cm}
+	\quad - Too much stability hinders "life-long" learning and task variety
+	
+	\vspace{0.25cm}
+	\quad - To keep learning, models need structural updates or focus on 
+	
+	\quad similar tasks
+	
+	\vspace{0.25cm}
+	\quad - Mostly differ from the "true" loss by an approximation error
+	
+	\vspace{0.5cm}
+	\textit{Open questions:}
+	
+	\vspace{0.25cm}
+	\quad - What are potential challenges in hyper-parameter estimation?
+	
+	\vspace{0.25cm}
+	\quad - Task similarity: a clear definition and can it exploited in 
+	
+	\quad regularization?
+\end{frame}
+
+\section{Appendix}
+\begin{frame}[allowframebreaks, noframenumbering, plain]{Individual Penalties}
+	
+	\begin{equation}
+		\pen_{CRR}(w) = \lambda\lVert w - \hat{w}^{(1)}\rVert_2^2
+	\end{equation}
+	
+	\begin{equation}
+		\pen_{l2}(w) = \lambda (w - \hat{w}^{(t)})^\top A (w - \hat{w}^{(t)})
+	\end{equation}
+	
+	\begin{equation}
+		\begin{split}
+			\pen_{AGSCL}(W)= &\mu\sum_{j,k \leq l,\nu} \id(\Omega_{j,k}^{(t-1)} = 0)\lVert W_{j,k} \rVert_2 \\
+			&+ \lambda \sum_{j,k \leq l,\nu} \id(\Omega_{j,k}^{(t-1)} > 0)\lVert W_{j,k} - \hat{W}_{j,k}^{(t-1)}\rVert_2
+		\end{split}
+	\end{equation}
+	
+	\begin{equation}
+		\pen_{LwF}(W) = \lambda \sum_{i = 1}^{\#classes}-y_{o,i}^{(t)} \log \hat{y}_{o,i}^{(t)}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{split}
+		\hat{W}^{(t)} = &\arg\min_{W} L(W, D^{(t)} \cup M)\\
+			&+ \beta L(W, M) + \frac{\alpha}{n^{(M)}}\sum_{i}^{n^{(M)}}\lVert f(W, x_i^{(M)}) - f(W^{(t-1)}, x_i^{(M)}) \rVert_2^2
+		\end{split}
+	\end{equation}
+	
+	\begin{equation}
+		\pen_{FRCL}(\theta, q(w^{(t)})) = - \sum_{j=1}^{t-1}\kl(q(\tilde{y}^{(j)})\Vert p_\theta(\tilde{y}^{(j)}))
+	\end{equation}
 	
 \end{frame}
 
 \section*{Sources}
-
-\begin{frame}{Sources}
-	
+\begin{frame}[t, allowframebreaks, noframenumbering, plain]{Sources}
+	\small
+	\bibliographystyle{abbrvnat}
+	\bibliography{bibliography}
 \end{frame}
+
+
 \end{document}
